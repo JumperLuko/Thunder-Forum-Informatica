@@ -75,7 +75,7 @@ header a img{
 		Position: absolute;
 		right: 5%;
 		top:14%;
-        border-radius:100%;
+        border-radius:20px;
 		}
 	.ButtonLogin:hover {
 		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #516ea6), color-stop(1, #546996));
@@ -261,15 +261,16 @@ header a img{
             margin-top:2%;
             margin-bottom:2%;
             height:100%;
-            border: 2px solid rgba(0, 0, 0, 0.74);
+            border: 2px solid rgba(238, 248, 254, 1);
+            box-shadow: 0px 0px 26px rgba(40, 40, 40, 0.8);
         }
 
         .article{
             margin-top: 10px;
-            margin-bottom:10px;
-            border-top:solid 3px #CCC;
-            border-bottom:solid 3px #CCC;
-            background: #CACEDA;
+            //margin-bottom:10px;
+            border-top:solid 3px rgba(238, 248, 254, 1);
+            border-bottom:solid 3px rgba(238, 248, 254, 1);
+            background: rgba(238, 248, 254, 1);
         }
 
         .title{
