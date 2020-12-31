@@ -1,7 +1,7 @@
 <?php
     include ("topo.php");
     require("conectar.php");
-    $consulta = "select * from tutorial";
+    $consulta = "select * from tutorial where tutorial.status=0";
     $resultado = mysqli_query($conexao,$consulta);
 ?>
         <li class="border_top_left_radius_menu"><a class="no_select" href="index.php">
@@ -56,7 +56,7 @@
             ');
         }
     ?>
-    <div class="article">
+    <!--<div class="article">
         <div class="block">
             <a href="../pdf/fuciona_computador.pdf"><div class="block_title">
                 Como Funciona um computador?
@@ -87,7 +87,7 @@
                 <br>Explicação histórica e de definições sobre a informática.
             </div>
         </div></a>
-    </div>
+    </div>-->
 
     <div class="margin-bottom"></div>
 

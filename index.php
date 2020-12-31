@@ -183,7 +183,24 @@
                         </div>
                     ');
                 }
-            } 
+            } else{
+                $consulta = "select post.id_post,post.content from post order by post.id_post desc limit 3 offset 0;";
+                //echo('Não logado');
+                $resultado = mysqli_query($conexao,$consulta);
+                echo('<br><p class="ultimas_quests">Últimas quests</p>');
+                while($linha  =  mysqli_fetch_array($resultado)){
+                    echo('
+                        <div class="content_question_home">
+                            <a href="perguntas-aberto.php?codigo='.$linha["id_post"].'">
+                            <div class="article">
+                            <div class="tag-post">quest '.$linha["id_post"].'</div>
+                                <div class="text_quest"><p>'.$linha["content"].'</p></div>
+                            </div>
+                            <div class="margin-bottom"></div>
+                        </div>
+                    ');
+                }
+            }
         ?>
             </div>
         </div>

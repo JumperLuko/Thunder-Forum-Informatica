@@ -56,7 +56,7 @@
                 $sql = mysqli_query($conexao, "select class_user.class,class_user.level,class_user.score as pontos,user.name,user.nickname as nick,user.email,user.gender,user.user_id_category_user as admin FROM class_user,user WHERE user_id_class_user=id_class_user and id_user='".$_SESSION["id"]."'");
                 $id = mysqli_fetch_array($sql);
                 if ($id["admin"]==0) {
-                    $consulta = "select denouncement.id_denouncement,denouncement.denouncement_id_post,denouncement.denouncement_id_user,denouncement.content from denouncement";
+                    $consulta = "select denouncement.id_denouncement,denouncement.status,denouncement.denouncement_id_post,denouncement.denouncement_id_user,denouncement.content from denouncement WHERE status=0";
                     $resultado = mysqli_query($conexao,$consulta);
                     //$linha  =  mysqli_fetch_array($resultado);
                     //while($linha  =  mysqli_fetch_array($resultado)){
@@ -76,7 +76,7 @@
                                             ID user
                                         </td>
                                         <td>
-                                            Conteúdo
+                                            Conteúdo denúncia
                                         </td>
                                     </form>
                                 </tr>
@@ -85,30 +85,23 @@
                             if(isset($linha["denouncement_id_post"])){
                                 echo('
                                 <tr>
-                                    <form action="" method="post">
-                                        <td>'.$linha["id_denouncement"].'</td>
-                                        <td>'.$linha["denouncement_id_post"].'</td>
-                                        <td>'.$linha["denouncement_id_user"].'</td>
-                                        <td>'.$linha["content"].'</td>
-                                        <td>
-                                            <form action="bloquear-denuncia-post.php" method="post">
-                                                <input type="hidden" name="" value="'.$linha["id_denouncement"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["denouncement_id_post"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["denouncement_id_user"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["content"].'"/>
+                                    <td>'.$linha["id_denouncement"].'</td>
+                                    <td><a href="perguntas-aberto.php?codigo='.$linha["denouncement_id_post"].'">'.$linha["denouncement_id_post"].'</a></td>
+                                    <td><a href="lista-usuarios.php">'.$linha["denouncement_id_user"].'</a></td>
+                                    <td>'.$linha["content"].'</td>
+                                    <td>
+                                        <form action="bloquear-denuncia-post.php" method="post">
+                                                <input type="hidden" name="denouncement_id" value="'.$linha["denouncement_id_post"].'"/>
+                                                <input type="hidden" name="id_denouncement" value="'.$linha["id_denouncement"].'"/>
                                                 <input type="submit" value="bloquear"/>
-                                            </form>
-                                        </td>
-                                        <td>
-                                            <form action="ignorar-denuncia-post.php" method="post">
-                                                <input type="hidden" name="" value="'.$linha["id_denouncement"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["denouncement_id_post"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["denouncement_id_user"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["content"].'"/>
-                                                <input type="submit" value="ignorar"/>
-                                            </form>
-                                        </td>
-                                    </form>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="ignorar-denuncia.php" method="post">
+                                            <input type="hidden" name="id_denouncement" value="'.$linha["id_denouncement"].'"/>
+                                            <input type="submit" value="ignorar"/>
+                                        </form>
+                                    </td>
                                 </tr>
                                 ');
                             }
@@ -121,71 +114,66 @@
                         
                         //-----------------------------------------------------------------------
                         
-                        $consulta = "select denouncement.id_denouncement,denouncement.denouncement_id_tutorial,denouncement.denouncement_id_user,denouncement.content from denouncement";
-                        $resultado = mysqli_query($conexao,$consulta);
-                        echo('
-                            <div class="homework3" action="" method="post">
-                                <div class="title-register">Denuncias de tutorial</div><br>
-                                <table border="1">
-                                    <tr>
-                                        <form action="" method="post">
-                                            <td>
-                                                ID denuncia
-                                            </td>
-                                            <td>
-                                                ID tutorial
-                                            </td>
-                                            <td>
-                                                ID user
-                                            </td>
-                                            <td>
-                                                Conteúdo
-                                            </td>
-                                        </form>
-                                    </tr>
-                        ');
-                        while($linha  =  mysqli_fetch_array($resultado)){
-                            if(isset($linha["denouncement_id_tutorial"])){
-                                echo('
-                                    <tr>
-                                        <form action="" method="post">
-                                            <td>'.$linha["id_denouncement"].'</td>
-                                            <td>'.$linha["denouncement_id_tutorial"].'</td>
-                                            <td>'.$linha["denouncement_id_user"].'</td>
-                                            <td>'.$linha["content"].'</td>
-                                            <td>
-                                                <form action="bloquear-denuncia-comment.php" method="post">
-                                                    <input type="hidden" name="" value="'.$linha["id_denouncement"].'"/>
-                                                    <input type="hidden" name="" value="'.$linha["denouncement_id_tutorial"].'"/>
-                                                    <input type="hidden" name="" value="'.$linha["denouncement_id_user"].'"/>
-                                                    <input type="hidden" name="" value="'.$linha["content"].'"/>
-                                                    <input type="submit" value="bloquear"/>
-                                                </form>
-                                            </td>
-                                            <td>
-                                                <form action="ignorar-denuncia-comment.php" method="post">
-                                                    <input type="hidden" name="" value="'.$linha["id_denouncement"].'"/>
-                                                    <input type="hidden" name="" value="'.$linha["denouncement_id_tutorial"].'"/>
-                                                    <input type="hidden" name="" value="'.$linha["denouncement_id_user"].'"/>
-                                                    <input type="hidden" name="" value="'.$linha["content"].'"/>
-                                                    <input type="submit" value="ignorar"/>
-                                                </form>
-                                            </td>
-                                        </form>
-                                    </tr>
-                                ');
-                            }
-                        }
+                        //~ $consulta = "select denouncement.id_denouncement,denouncement.status,denouncement.denouncement_id_tutorial,denouncement.denouncement_id_user,denouncement.content from denouncement WHERE status=0";
+                        //~ $resultado = mysqli_query($conexao,$consulta);
+                        //~ echo('
+                            //~ <div class="homework3" action="" method="post">
+                                //~ <div class="title-register">Denuncias de tutorial</div><br>
+                                //~ <table border="1">
+                                    //~ <tr>
+                                        //~ <form action="" method="post">
+                                            //~ <td>
+                                                //~ ID denuncia
+                                            //~ </td>
+                                            //~ <td>
+                                                //~ ID tutorial
+                                            //~ </td>
+                                            //~ <td>
+                                                //~ ID user
+                                            //~ </td>
+                                            //~ <td>
+                                                //~ Conteúdo denúncia
+                                            //~ </td>
+                                        //~ </form>
+                                    //~ </tr>
+                        //~ ');
+                        //~ while($linha  =  mysqli_fetch_array($resultado)){
+                            //~ if(isset($linha["denouncement_id_tutorial"])){
+                                //~ echo('
+                                    //~ <tr>
+                                        //~ <form action="" method="post">
+                                            //~ <td>'.$linha["id_denouncement"].'</td>
+                                            //~ <td>'.$linha["denouncement_id_tutorial"].'</td>
+                                            //~ <td>'.$linha["denouncement_id_user"].'</td>
+                                            //~ <td>'.$linha["content"].'</td>
+                                            //~ <td>
+                                                //~ <form action="bloquear-denuncia.php" method="post">
+                                                    //~ <input type="hidden" name="denouncement_id" value="'.$linha["denouncement_id_comment"].'"/>
+                                                    //~ <input type="hidden" name="id_denouncement" value="'.$linha["id_denouncement"].'"/>
+                                                    //~ <input type="submit" value="bloquear"/>
+                                                //~ </form>
+                                            //~ </td>
+                                            //~ <td>
+                                                //~ <form action="ignorar-denuncia.php" method="post">
+                                                    //~ <input type="hidden" name="id_denouncement" value="'.$linha["id_denouncement"].'"/>
+                                                    //~ <input type="submit" value="ignorar"/>
+                                                //~ </form>
+                                            //~ </td>
+                                        //~ </form>
+                                    //~ </tr>
+                                //~ ');
+                            //~ }
+                        //~ }
                         
-                        echo('
+                        //~ echo('
                                 
-                                </table>
-                            </div>
-                        ');
+                                //~ </table>
+                            //~ </div>
+                        //~ ');
                         
                         //-----------------------------------------------------------------------
                         
-                        $consulta = "select denouncement.id_denouncement,denouncement.denouncement_id_comment,denouncement.denouncement_id_user,denouncement.content from denouncement";
+                        $consulta = "select denouncement.id_denouncement,denouncement.status,denouncement.denouncement_id_comment,denouncement.denouncement_id_user,denouncement.content from denouncement WHERE status=0;";
                         $resultado = mysqli_query($conexao,$consulta);
                         echo('
                             <div class="homework3" action="" method="post">
@@ -203,7 +191,7 @@
                                                 ID user
                                             </td>
                                             <td>
-                                                Conteúdo
+                                                Conteúdo denúncia
                                             </td>
                                         </form>
                                     </tr>
@@ -211,32 +199,27 @@
                         while($linha  =  mysqli_fetch_array($resultado)){
                             if(isset($linha["denouncement_id_comment"])){
                                 echo('
-                                <tr>
-                                    <form action="" method="post">
-                                        <td>'.$linha["id_denouncement"].'</td>
-                                        <td>'.$linha["denouncement_id_comment"].'</td>
-                                        <td>'.$linha["denouncement_id_user"].'</td>
-                                        <td>'.$linha["content"].'</td>
-                                        <td>
-                                            <form action="bloquear-denuncia-comment.php" method="post">
-                                                <input type="hidden" name="" value="'.$linha["id_denouncement"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["denouncement_id_comment"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["denouncement_id_user"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["content"].'"/>
-                                                <input type="submit" value="bloquear"/>
-                                            </form>
-                                        </td>
-                                        <td>
-                                            <form action="ignorar-denuncia-comment.php" method="post">
-                                                <input type="hidden" name="" value="'.$linha["id_denouncement"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["denouncement_id_comment"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["denouncement_id_user"].'"/>
-                                                <input type="hidden" name="" value="'.$linha["content"].'"/>
-                                                <input type="submit" value="ignorar"/>
-                                            </form>
-                                        </td>
-                                    </form>
-                                </tr>
+                                    <tr>
+                                        
+                                            <td>'.$linha["id_denouncement"].'</td>
+                                            <td>'.$linha["denouncement_id_comment"].'</td>
+                                            <td>'.$linha["denouncement_id_user"].'</td>
+                                            <td>'.$linha["content"].'</td>
+                                            <td>
+                                                <form action="bloquear-denuncia.php" method="post">
+                                                    <input type="hidden" name="denouncement_id" value="'.$linha["denouncement_id_comment"].'"/>
+                                                    <input type="hidden" name="id_denouncement" value="'.$linha["id_denouncement"].'"/>
+                                                    <input type="submit" value="bloquear"/>
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <form action="ignorar-denuncia.php" method="post">
+                                                    <input type="hidden" name="id_denouncement" value="'.$linha["id_denouncement"].'"/>
+                                                    <input type="submit" value="ignorar"/>
+                                                </form>
+                                            </td>
+                                        
+                                    </tr>
                                 ');
                             }
                         }
@@ -253,7 +236,7 @@
                 echo('
                     <h1 style="color: red; font-weight: bold; border-radius: 1px; box-shadow: 0px 0px 99px 150px rgb(255, 72, 0);">AQUI NÃO É ÁREA PARA USUÁRIO COMUM, SAIA DAQUI!!</h1>
                     <script>
-                        window.location="index.php", 0000
+                        window.location="index.php", 9000
                     </script>
                 ');
             }

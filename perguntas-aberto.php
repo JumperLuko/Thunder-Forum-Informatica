@@ -66,7 +66,7 @@
         
         <div class="respostas">
             <?php                
-                $consulta = "select user.nickname as nick,comment.content as comentario,comment.id_comment from comment,user WHERE comment.comment_id_post='".$codigo."' and user.id_user=comment.comment_id_user";
+                $consulta = "select user.nickname as nick,comment.content as comentario,comment.id_comment from comment,user WHERE comment.comment_id_post='".$codigo."' and user.id_user=comment.comment_id_user and comment.status=0";
                 $resultado = mysqli_query($conexao,$consulta);
                 while($linha  =  mysqli_fetch_array($resultado)){
                     

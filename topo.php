@@ -17,6 +17,7 @@ session_start();
     <link type="text/css" rel="stylesheet" href="cadastro.css">
     <link type="text/css" rel="stylesheet" href="homework.css">
     <link type="text/css" rel="stylesheet" href="contato.css">
+    <link type="text/css" rel="stylesheet" href="index.css">
     <script type="text/javascript" src="script/metro.js"></script>
 </head>
 
