@@ -56,7 +56,7 @@
                 $sql = mysqli_query($conexao, "select class_user.class,class_user.level,class_user.score as pontos,user.name,user.nickname as nick,user.email,user.gender,user.user_id_category_user as admin FROM class_user,user WHERE user_id_class_user=id_class_user and id_user='".$_SESSION["id"]."'");
                 $id = mysqli_fetch_array($sql);
                 if ($id["admin"]==0) {
-                    $consulta = "select * from denouncement";
+                    $consulta = "select denouncement.id_denouncement,denouncement.denouncement_id_post,denouncement.denouncement_id_user,denouncement.content from denouncement";
                     $resultado = mysqli_query($conexao,$consulta);
                     //$linha  =  mysqli_fetch_array($resultado);
                     //while($linha  =  mysqli_fetch_array($resultado)){
@@ -121,7 +121,7 @@
                         
                         //-----------------------------------------------------------------------
                         
-                        $consulta = "select * from denouncement";
+                        $consulta = "select denouncement.id_denouncement,denouncement.denouncement_id_tutorial,denouncement.denouncement_id_user,denouncement.content from denouncement";
                         $resultado = mysqli_query($conexao,$consulta);
                         echo('
                             <div class="homework3" action="" method="post">
@@ -185,7 +185,7 @@
                         
                         //-----------------------------------------------------------------------
                         
-                        $consulta = "select * from denouncement";
+                        $consulta = "select denouncement.id_denouncement,denouncement.denouncement_id_comment,denouncement.denouncement_id_user,denouncement.content from denouncement";
                         $resultado = mysqli_query($conexao,$consulta);
                         echo('
                             <div class="homework3" action="" method="post">

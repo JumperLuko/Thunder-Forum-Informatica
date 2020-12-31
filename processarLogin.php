@@ -18,6 +18,7 @@ require("conectar.php");
 
 $email=$_POST['email'];
 $senha=$_POST['senha'];
+//$senha = sha1($senha);
 
 $sql = mysqli_query($conexao, "SELECT user.id_user,user.nickname as nick,user.email as email,user.name as name,user.gender as gender FROM user WHERE email = '".$email."' AND password = '".$senha."'");
 $row = mysqli_num_rows($sql);

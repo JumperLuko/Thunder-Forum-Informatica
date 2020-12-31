@@ -13,5 +13,5 @@
     $sql = mysqli_query($conexao, "UPDATE user SET tutorial.title_tutorial='".$title."',tutorial.description='".$descricao."',tutorial.archive='".$pdf."',tutorial.status='".$status."',tutorial.image_tutorial='".$image."',tutorial.background_tutorial='".$color."' WHERE id_tutorial='".$id_tutorial."'");
 ?>
 <script>
-    window.location='lista-tutoriais.php', 0000
+    //window.location='lista-tutoriais.php', 0000
 </script>

@@ -30,11 +30,11 @@
     <legend><h1>Cadastrando usuario</h1></legend>
     <li>
         <label>Nome:</label>
-        <input class="space" required="" pattern="[a-zA-Zç Ç]+" placeholder="verdadeiro" type="text" name="nome" id="name" maxlength="100">
+        <input class="space" required="" pattern="[a-zA-Zç Ç]+" placeholder="verdadeiro" type="text" name="nome" id="name" maxlength="1000">
     </li>
     <li>
         <label>Nickname:</label>
-        <input class="space" required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="ate 100 caracteres" type="text" name="nick" maxlength="30">
+        <input class="space" required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="ate 100 caracteres" type="text" name="nick" maxlength="150">
     </li>
     <li>
         <label>Email:</label>

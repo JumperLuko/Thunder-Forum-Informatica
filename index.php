@@ -58,6 +58,8 @@
                 $sql = mysqli_query($conexao, "select class_user.class,class_user.level,class_user.score as pontos,user.password,user.name,user.nickname as nick,user.email,user.gender,user.user_id_category_user as admin FROM class_user,user WHERE user_id_class_user=id_class_user and id_user='".$_SESSION["id"]."'");
                 $id = mysqli_fetch_array($sql);
                 $genero=$id["gender"];
+                //$senha = sha1('.$id["password"].');
+                //echo($senha);
                 if($id["gender"]=='m'){
                     $genero='Masculino';
                 }
@@ -112,7 +114,7 @@
                                 </tr>
                                 <tr>
                                     <td><label>Senha</label></td>
-                                    <td><input class="space1" required="" placeholder="Lembre-se dela" type="password" name="password2" id="password2" maxlength="100" value="'.$id["name"].'"></td>
+                                    <td><input class="space1" required="" placeholder="Lembre-se dela" type="password" name="password2" id="password2" maxlength="100" value="'.$id["password"].'"></td>
                                 </tr>
                                 <tr><td><input type="submit" name="submit" value="Enviar" /></td></tr>
                             </table>

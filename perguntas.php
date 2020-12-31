@@ -42,9 +42,11 @@
 <?php
     require("conectar.php");
     if(isset($_GET['categoria'])){
-        $consulta = "select post.id_post,post.content from post WHERE post.post_id_category_post='".$_GET['categoria']."'";
+        $consulta = "select post.id_post,post.content from post WHERE post.post_id_category_post='".$_GET['categoria']."' order by post.id_post desc limit 3 offset 0;";
+        // like '%meu%'
+        // select post.id_post,post.content from post WHERE post.post_id_category_post=5 and post.content like '%meu%' order by post.id_post desc limit 3 offset 0;
     } else {
-        $consulta = "select post.id_post,post.content from post";
+        $consulta = "select post.id_post,post.content from post order by post.id_post desc limit 3 offset 0;";
     }
     $resultado = mysqli_query($conexao,$consulta);
     while($linha  =  mysqli_fetch_array($resultado)){
