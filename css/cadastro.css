@@ -41,6 +41,10 @@ form fieldset li{
 
 #enviar{
 	box-shadow: 3px 3px 3px #000;
+    margin-top: 20px;
+    margin-left: 3%;
+    padding: 12px 30px;
+    transition: all 0.1s linear 0s;
 }
 
 #enviar:hover{

@@ -6,9 +6,9 @@
             margin-top:2%;
             margin-bottom:2%;
             height:100%;
-            border: 2px solid rgba(0, 0, 0, 0.74);
+            border: 2px solid #EEF8FE;
             //float:right;
-            padding: 0.2%;
+            //padding: 0.2%;
         }
 
 .category{
@@ -18,8 +18,8 @@
 	margin-right:70%;
 	margin-top:2%;
 	float:left;
-	border: 2px solid rgba(0, 0, 0, 0.74);
-	padding: 0.2%;
+	border: 2px solid #EEF8FE;
+	//padding: 0.2%;
 }
 
 .category img{

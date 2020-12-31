@@ -302,10 +302,23 @@ header a img{
 			//position: fixed;
 			bottom: 0px;
 			position:relative;
+            height: 300px;
+            white-space:nowrap;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 1%;
+            padding-bottom:1%;
+        }
+
+        .feet font{
+            color: #EEF8FE;
+            white-space:nowrap;
+            font-size:30px;
         }
         
         .feet a{
 			text-decoration:none;
+            white-space:normal; /*nowrap (não quebra linha de jeito nenhum.) - pre (quebras de linha no código viram quebras de linha no layout -Ie6 incompatível- equivalente à tag pre.) - normal (mantém o elemento no padrão.) */
         }
 		
 		.feet a:link{
