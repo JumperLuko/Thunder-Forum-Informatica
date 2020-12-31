@@ -1,5 +1,15 @@
 fieldset{
 	list-style:none;
+	border: 0px;
+	//margin: 0 auto; //centralização?
+}
+
+form{
+	//margin: 0 auto;
+}
+
+form fieldset li{
+	font-family:Calibri,Arial;
 }
 
 form fieldset li{
@@ -9,4 +19,34 @@ form fieldset li{
 	text-indent: 20px;
 	font-family:"consolas","lucida console";
 	font-size:16px;
+}
+
+.space{
+	height:35px;
+	width: 30%;
+	border:1px solid #E1E1E1;
+	border-radius: 5px;
+	background-color:#F8F8F8;
+	margin:5px;
+	//box-shadow: 0px 0px 8px #E4EDF3;
+}
+
+.sexo{
+	box-shadow: 0px 0px 8px #E4EDF3;
+}
+
+.space:hover{
+	box-shadow: 0px 0px 8px #E4EDF3;
+}
+
+#enviar{
+	box-shadow: 3px 3px 3px #000;
+}
+
+#enviar:hover{
+	box-shadow: 0px 0px 10px #000;
+}
+
+#enviar:active{
+	box-shadow: 0px 0px 100px blue;
 }
