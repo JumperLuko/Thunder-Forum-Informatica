@@ -96,20 +96,24 @@
                                             <td>
                                 ');
                                 if($linha["user_id_category_user"]==0){
-                                    echo('0');
+                                    echo('
+                                        <select name="admin">
+                                            <option value="0">Admin</option>
+                                            <option value="1">Usuário</option>
+                                        </select>
+                                    ');
                                 } elseif($linha["user_id_category_user"]==1){
                                     echo('
-                                        <select>
-                                            <option value=""></option>
-                                            <option value=""></option>
+                                        <select name="admin">
+                                            <option value="1">Usuário</option>
+                                            <option value="0">admin</option>
                                         </select>
-                                        1
                                     ');
                                 } else{
                                     echo('2');
                                 }
                                 echo('
-                                                <input class="space_tutorial" required="" pattern="[0-4]+" placeholder="número" type="text" name="admin"  maxlength="11" value="'.$linha["user_id_category_user"].'">
+                                                <!--<input class="space_tutorial" required="" pattern="[0-4]+" placeholder="número" type="text" name="admin"  maxlength="11" value="'.$linha["user_id_category_user"].'">-->
                                             </td>
                                             <td>
                                                 <input class="space_tutorial" required="" placeholder="link" type="text" name="level"  maxlength="11" value="'.$linha["user_id_class_user"].'">

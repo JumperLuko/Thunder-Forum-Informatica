@@ -14,5 +14,5 @@
 
 ?>
     <script>
-        window.location='../html/perguntas.php', 0000
+        window.location='perguntas.php', 0000
     </script>

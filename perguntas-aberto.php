@@ -52,8 +52,11 @@
                 $consulta = "select post.content,post.id_post from post where post.id_post='".$codigo."'";
                 $resultado = mysqli_query($conexao,$consulta);
                 while($linha  =  mysqli_fetch_array($resultado)){
+                    if(isset($_SESSION["id"])){
+                        echo('
+                            <div class="denuncia"> <a href="denuncia.php?post='.$linha["id_post"].'">Denunciar</a></div>');
+                    }
                     echo('
-                        <div class="denuncia"> <a href="denuncia.php?post='.$linha["id_post"].'">Denunciar</a></div>
                         <div class="title">Quest '.$codigo.'</div>
                         <div class="text"><p>'.$linha["content"].'</p></div>
                     ');
@@ -76,9 +79,11 @@
                             <span class="user-name"><a>'.$linha["nick"].'</a></span><br>
                             <span class="post-mensage">'.$linha["comentario"].'</span>
                         </span>
-                        <div class="denuncia"> <a href="denuncia.php?comment='.$linha["id_comment"].'">Denunciar</a></div>
-                    </div>
-                ');
+                    ');
+                    if(isset($_SESSION["id"])){
+                        echo('<div class="denuncia"> <a href="denuncia.php?comment='.$linha["id_comment"].'">Denunciar</a></div>');
+                    }
+                echo('</div>');
                 }
             ?>
             <?php
@@ -99,13 +104,6 @@
     </div>
     <div class="margin-bottom"></div>
 </div>
-
-<footer class="feet">
-        <p><font>Recomendações: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
-</footer>
- 
-<!-- <div class="pro_footer"><img src="../images/teste/morcego.png"/><img src="../images/teste/coracao.png"/><img src="../images/teste/morcego.png"/><img src="../images/teste/coracao.png"/></div> -->
- 
-</body>
-
-</html>
+<?php
+    require ("feet.php");
+?>
