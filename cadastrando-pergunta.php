@@ -13,5 +13,5 @@
     VALUES('$date','$content','$status','$post_id_category_post','$post_id_user')");
 ?>
     <script>
-        window.location='../html/perguntas.php', 0000
+        window.location='perguntas.php', 0000
     </script>

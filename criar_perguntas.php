@@ -33,10 +33,10 @@
 ?>
 <section class="content">
     <div class="article">
-        <form action="../php/cadastrando-pergunta.php" method="post">
+        <form action="cadastrando-pergunta.php" method="post">
             <fieldset>
                 <legend><h1>Cadastramento de postagem</h1></legend>
-                <li>
+                <li class="criar-perguntas">
                     <label>Pergunta: </label>
                     <input type="text" class="textarea-perguntas" required="" placeholder="Escreva aqui"  name="conteudo" id="conteudo" maxlength="2000"/>
                 </li>

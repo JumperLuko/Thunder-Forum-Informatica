@@ -6,7 +6,7 @@ session_start();
 
 <head>
     <title>Thunder</title>
-    <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <link rel="icon" type="image/png" href="icon.png">
     <link type="text/css" rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="index.css">

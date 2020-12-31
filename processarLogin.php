@@ -4,10 +4,10 @@
 <title>Autenticando</title>
 <script type="text/javascript">
     function login(){
-        setTimeout("window.location='index.php'", 2000);
+        setTimeout("window.location='index.php'", 0000);
     }
     function loginf()  {
-        setTimeout("window.location='login.php'", 1000);
+        setTimeout("window.location='login.php'", 0000);
     }
 </script>
 </head>
@@ -26,9 +26,9 @@ if($row == 1) {
     session_start();
     $_SESSION['id']=$id['id_user'];
     $_SESSION['nick']=$id['nick'];
-    $_SESSION['email']=$id['email'];
-    $_SESSION['name']=$id['name'];
-    $_SESSION['gender']=$id['gender'];
+    //$_SESSION['email']=$id['email'];
+    //$_SESSION['name']=$id['name'];
+    //$_SESSION['gender']=$id['gender'];
     echo "<center><h1>Você foi autenticado com sucesso! Aguarde um instante.</h1></center>";
     echo "<script>login()</script>";
 } else {

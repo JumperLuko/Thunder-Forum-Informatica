@@ -80,6 +80,8 @@
                             <input type="submit" name="enviar_comentario" value="Enviar">
                         </form>
                     ');
+                } else{
+                    echo('<br><div class="aviso-comment">Só usuários logados podem comentar!</div>');
                 }
             ?>
         </div>

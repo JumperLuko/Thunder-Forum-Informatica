@@ -34,6 +34,7 @@
 ?>
   
 <section class="content">
+    <div class="article"><div class="title-tutoriais">Aqui você pode consultar tutoriais postados pelos administradores da página</div></div>
     <div class="article">
         <div class="block">
             <a href="../pdf/fuciona_computador.pdf"><div class="block_title">

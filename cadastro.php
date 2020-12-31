@@ -25,7 +25,7 @@
 <section class="content">
 <div class="article">
 <!--<form action="?go=../php/cadastrando.php" method="post">-->
-<form action="../php/cadastrando.php" method="post">
+<form action="cadastrando.php" method="post">
 <fieldset>
     <legend><h1>Cadastrando usuario</h1></legend>
     <li>
@@ -34,7 +34,7 @@
     </li>
     <li>
         <label>Nickname:</label>
-        <input class="space" required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="ate x caracteres" type="text" name="nick" maxlength="30">
+        <input class="space" required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="ate 100 caracteres" type="text" name="nick" maxlength="30">
     </li>
     <li>
         <label>Email:</label>

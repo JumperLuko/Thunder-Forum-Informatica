@@ -1,3 +1,52 @@
 .homework{
     list-style: outside none none;
+    background-color: rgba(51, 51, 51, 0.21);
+    padding:1%;
+    border:rgba(51, 51, 51, 0.5) solid 2px;
+    width:40%;
+    //float:left;
+    margin-bottom:2%;
+    //clear: left;
+}
+
+.space1{
+    height:35px;
+    width: 60%;
+    border:1px solid #E1E1E1;
+    border-radius: 5px;
+    background-color:#F8F8F8;
+    margin:5px;
+    //box-shadow: 0px 0px 8px #E4EDF3;
+}
+
+.homework2{
+    list-style: outside none none;
+    background-color: rgba(51, 51, 51, 0.21);
+    padding:1%;
+    border:rgba(51, 51, 51, 0.5) solid 2px;
+    width:40%;
+    //float:right;
+    margin-bottom:2%;
+    //clear: right;
+}
+
+.space2{
+    height:35px;
+    width: 60%;
+    border:1px solid #E1E1E1;
+    border-radius: 5px;
+    background-color:#F8F8F8;
+    margin:5px;
+    //box-shadow: 0px 0px 8px #E4EDF3;
+}
+
+.homework3{
+    list-style: outside none none;
+    background-color: rgba(51, 51, 51, 0.21);
+    padding:1%;
+    border:rgba(51, 51, 51, 0.5) solid 2px;
+    width:97%;
+    //float:left;
+    margin-bottom:2%;
+    //clear: right;
 }

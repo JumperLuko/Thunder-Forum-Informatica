@@ -7,7 +7,10 @@
     margin-bottom:2%;
     height:100%;
     border: 2px solid #EEF8FE;
-    //float:right;
+    //float:left;
+    //clear: left;
+    //display: inline-block;
+    width:60%;
     //padding: 0.2%;
     box-shadow: 0px 0px 30px #000;
 }
@@ -27,6 +30,8 @@
     margin-right:70%;
     margin-top:2%;
     //float:left;
+    //clear: left;
+    //display: inline-block;
     border: 2px solid #EEF8FE;
     //padding: 0.2%;
     width: 17%;
@@ -163,4 +168,17 @@ padding-left:10px;
     padding-left:8px;
     float:left;
     font-family:Pixel Chaos,PonyMaker,Arial;
+}
+
+.aviso-comment{
+    margin:0px 0px 0px;
+    padding:0px 0px 2% 4%;
+    font-size:15px;
+    color:#B00000;
+    font-weight:bold;
+}
+
+
+.criar-perguntas input{
+    width:80%;
 }
