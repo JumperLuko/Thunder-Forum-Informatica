@@ -17,6 +17,12 @@
         //background-repeat: no-repeat;
 }
 
+.special{
+	position:absolute;
+	right:1%;
+	top:1%;
+}
+
 .header_img{
 	background-image:url(images/logo2.1.png);
 	background-repeat: no-repeat;
