@@ -5,7 +5,10 @@ session_start();
 if(!isset($_SESSION['email']) || !isset($_SESSION['senha']))	{
 	header("Location: Login.php");
 	exit;
-} else {
+}
+if($_SESSION['email']=\\comparar com cadastro do banco) 
+
+else {
 	echo "Você esta logado! :D";
 }
 ?>

@@ -1,60 +1,28 @@
-<?php 
-session_start();
-session_unset();
-session_destroy();
+<?php
+    session_start();
+    if(!isset($_SESSION["id"])){
+        header("location:../../index.php");
+    }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-	<title>Thunder</title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <link rel="icon" type="image/png" href="icon.png">
-        <link type="text/css" rel="stylesheet" href="style.css">
-        <link type="text/css" rel="stylesheet" href="css/index.css">
-        <link type="text/css" rel="stylesheet" href="css/metro.css">
-        <!--<link type="text/css" rel="stylesheet" href="css/login.css">-->
-        <script type="text/javascript" src="script/metro.js"></script>
-        
-        <!--<link href="layoutit/css/bootstrap.min.css" rel="stylesheet">-->
-    </head>
-
-<body>
-    <header>
-		<a href="index-special.html" class="special"><img src="images/special-ativate.png" width="20px"></a>
-    	<a href="index.php"><div class="header_img"></div></a>
-    	
-    	<div class="login">
-			<a href="html/login.php" class="ButtonLogin">LOGIN</a>
-			<!--<div class="area-login">
-				<ul>
-					<li>Email: <input placeholder="Digite seu email" type="text"  name="email"></li>
-					<li>Senha:<input placeholder="Digite sua senha" type="password" name="senha"></li>
-					<li><a href="../index-homework.html" class="myButton">ENTRAR</a></li>
-				</ul>
-			</div>-->
-        </div>
-    </header>
+<?php require("../../php/topo-logado.php");?>
 
 <nav class="navbar" role="navigation">
     <div class="navbar_padding">
     <li class="border_top_left_radius_menu" style="
     border-bottom: 4px rgb(87, 155, 190) solid;
-"><div class="border-li"><a class="select" href="index.php">HOME</a></div></li>
-		<li class="border_menu"><a class="no_select" href="html/perguntas.php" >PERGUNTAS</a></li>
-		<li class="border_menu"><a class="no_select" href="html/tutoriais.php" >TUTORIAIS</a></li>
-		<li class="border_menu"><a class="no_select" href="html/contato.php" >CONTATO</a></li>
-		<li class="border_top_right_radius_menu"><a class="no_select" href="html/cadastro.php" >CADASTRE-SE</a></li>
+"><div class="border-li"><a class="select" href="index.php">USER</a></div></li>
+		<li class="border_menu"><a class="no_select" href="perguntas.php" >PERGUNTAS</a></li>
+		<li class="border_menu"><a class="no_select" href="tutoriais.php" >TUTORIAIS</a></li>
+		<li class="border_menu"><a class="no_select" href="contato.php" >CONTATO</a></li>
 		<input type="text" name="searching" placeholder="Pesquisar no fórum" class="search" value="">
-		<a href="../index.html" class="ButtonSearch"><img src="images/search-icon.png" width="20px"></a>
+		<a href="../index.html" class="ButtonSearch"><img src="../../images/search-icon.png" width="20px"></a>
     </div>
 </nav>
 
-<audio controls="auto" id="demo" hidden="true" controls autoplay>
+<!--<audio controls="auto" id="demo" hidden="true" controls autoplay>
     <source src="PC_Thunder_speak.mp3" type="audio/mp3">
-</audio>
+</audio>-->
 
 <!--<div>
   <button onclick="document.getElementById('demo').play()">Reproduzir o áudio</button>
@@ -68,7 +36,7 @@ session_destroy();
 <section class="content">
 	
 	<div class="article">
-		<div class="title">Bem-Vindo ao Thunder</div>
+		<div class="title">Home</div>
 		<div class="text">
 			<p>Seja bem-vindo usuário, aqui você pode receber respostas para qualquer dúvida que tiver quanto à informática e para as dúvidas que nem sabia que tinha.<br>
 		</div>
@@ -170,12 +138,7 @@ session_destroy();
     <script src="layoutit/js/jquery.min.js"></script>
     <script src="layoutit/js/bootstrap.min.js"></script>-->
 
-    
-<footer class="feet">
-        <p><font>Recomendações: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
-</footer>
- 
-<div class="pro_footer"><img src="images/teste/morcego.png"/><img src="images/teste/coracao.png"/><img src="images/teste/morcego.png"/><img src="images/teste/coracao.png"/></div>
+<?php require("../../php/footer-logado.php");?>
  
 </body>
 

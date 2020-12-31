@@ -38,8 +38,8 @@ $email=$_POST['email'];
 $sexo=$_POST['sexo'];
 $senha=$_POST['senha'];
 
-$sql = mysqli_query($conexao, "INSERT INTO user(name,nickname,email,gender,password)
-VALUES('$nome','$nick','$email','$sexo','$senha')")
+$sql = mysqli_query($conexao, "INSERT INTO user(name,nickname,email,gender,password,user_id_category_user,user_id_class_user)
+VALUES('$nome','$nick','$email','$sexo','$senha','1','0')")
 ?>
 
 </body>
