@@ -4,11 +4,11 @@
 <title>Autenticando</title>
 <script type="text/javascript">
 	function login(){
-			setTimeout("window.location='../index-homework.html'", 2000);
+			setTimeout("window.location='index.php'", 2000);
 	}
 	
 	function loginf()  {
-		setTimeout("window.location='../html/login.php'", 2000);
+		setTimeout("window.location='login.php'", 2000);
 	}
 </script>
 </head>
