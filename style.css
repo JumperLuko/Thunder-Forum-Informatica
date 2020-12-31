@@ -17,6 +17,33 @@
   src: url("fonts/Vanadine Bold.ttf");
 }
 
+@font-face {
+  font-family: "PonyMaker";
+  src: url("fonts/PonyMaker.ttf");
+}
+
+@font-face {
+  font-family: "After the Goldrush";
+  src: url("fonts/After the Goldrush.ttf");
+}
+
+
+@font-face {
+  font-family: "Urban Elegance Bold";
+  src: url("fonts/Urban Elegance Bold.ttf");
+}
+
+@font-face {
+  font-family: "";
+  src: url("");
+}
+
+@font-face {
+  font-family: "";
+  src: url("");
+}
+
+
 /*@font-face { font-family: Century;
 	src: url('GOTHIC.ttf');
 	font-style:normal;
@@ -157,6 +184,10 @@ header a img{
 	float:right;
 }
 
+.marca_da_agua a:link{
+ color:#336;
+}
+
 	.navbar {
 		background: #333366;
 		//position: relative;
@@ -289,14 +320,17 @@ header a img{
         }
 
         .title{
-            font-size:30px;
+            font-size:50px;
             text-align:center;
             padding-top:8px;
+            font-family:PonyMaker,Arial;
         }
 
         .text{
         padding-left:13px;
         padding-right:13px;
+        font-family:'Calibri';
+        font-size:20px;
         }
 
         .feet{

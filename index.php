@@ -18,7 +18,7 @@
 <body>
     <header>
 		<a href="index-special.html" class="special"><img src="images/special-ativate.png" width="20px"></a>
-    	<a href="index.html"><div class="header_img"></div></a>
+    	<a href="index.php"><div class="header_img"></div></a>
     	
     	<div class="login">
 			<a href="html/login.php" class="ButtonLogin">LOGIN</a>
@@ -63,7 +63,9 @@
 	
 	<div class="article">
 		<div class="title">Bem-Vindo ao Thunder</div>
-		<div class="text"><p>Nós te amamos querido usuário</div>
+		<div class="text">
+			<p>Seja bem-vindo usuário, aqui você pode receber respostas para qualquer dúvida que tiver quanto à informática e para as dúvidas que nem sabia que tinha.<br>
+		</div>
 	</div>
 
 	<div class=""></div>

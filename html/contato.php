@@ -35,7 +35,7 @@
 	</div>
 </nav>
     
-<div class="marca_da_agua"><a href="codigos.html">_</a></div>  
+<div class="marca_da_agua"><a href="../codigos.html">_</a></div>  
   
 <section class="content">
 <div class="article">

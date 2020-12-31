@@ -5,80 +5,44 @@
 	<head>
 		<title>Thunder</title>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<link rel="icon" 
-            type="image/png" 
-            href="http://icdn.pro/images/en/l/i/lightning-icone-7684-96.png">
+		<link rel="icon" type="image/png" href="http://icdn.pro/images/en/l/i/lightning-icone-7684-96.png">
+		<link type="text/css" rel="stylesheet" href="../style.css">
+		<link type="text/css" rel="stylesheet" href="../css/login.css">
 		<style type="text/css" rel="stylesheet">
-		body{
-			text-align: center;
-			font-family: Arial;
-			Color: white;
-			BAckground-color: #525280;
-			}
-		ul{
-			list-style: none;
-		}
-		li{
-		font-family: Arial;
-		color: #ffffff;
-		width: 15%;	
-		display: block;
-		padding: 1%; 
-			}
-
-
-		.myButton {
-			-moz-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
-			-webkit-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
-			box-shadow:inset 0px 1px 0px 0px #7a8eb9;
-			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #546996), color-stop(1, #516ea6));
-			background:-moz-linear-gradient(top, #546996 5%, #516ea6 100%);
-			background:-webkit-linear-gradient(top, #546996 5%, #516ea6 100%);
-			background:-o-linear-gradient(top, #546996 5%, #516ea6 100%);
-			background:-ms-linear-gradient(top, #546996 5%, #516ea6 100%);
-			background:linear-gradient(to bottom, #546996 5%, #516ea6 100%);
-			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#546996', endColorstr='#516ea6',GradientType=0);
-			background-color:#546996;
-			border:1px solid #314179;
-			display:inline-block;
-			cursor:pointer;
-			color:#ffffff;
-			font-family:arial;
-			font-size:13px;
-			font-weight:bold;
-			padding:6px 76px;
-			text-decoration:none;
-		}
-		.myButton:hover {
-			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #516ea6), color-stop(1, #546996));
-			background:-moz-linear-gradient(top, #516ea6 5%, #546996 100%);
-			background:-webkit-linear-gradient(top, #516ea6 5%, #546996 100%);
-			background:-o-linear-gradient(top, #516ea6 5%, #546996 100%);
-			background:-ms-linear-gradient(top, #516ea6 5%, #546996 100%);
-			background:linear-gradient(to bottom, #516ea6 5%, #546996 100%);
-			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#516ea6', endColorstr='#546996',GradientType=0);
-			background-color:#516ea6;
-		}
-		.myButton:active {
-			position:relative;
-			top:1px;
-	}
-
-	
 	</style>
 </head>
 
 <body>
 
-    <form action="../php/processarLogin.php" method="post">
+    <header>
+		<a href="../index-special.html" class="special"><img src="../images/special-ativate.png" width="20px"></a>
+    	<a href="../index.php"><div class="header_img"></div></div>
+        <a href="login.php" class="ButtonLogin">LOGIN</a>
+    </header>
+
+<nav class="navbar" role="navigation">
+	<div class="navbar_padding">
+		<li class="border_top_left_radius_menu"><a class="no_select" href="../index.php">HOME</a></li>
+		<li class="border_menu"><a class="no_select" href="perguntas.php" >PERGUNTAS</a></li>
+		<li class="border_menu"><a class="no_select" href="tutoriais.php" >TUTORIAIS</a></li>
+		<li class="border_menu"><a class="no_select" href="contato.php" >CONTATO</a></li>
+		<li class="border_top_right_radius_menu"><a class="no_select" href="cadastro.php" >CADASTRE-SE</a></li>
+		<input type="text" name="searching" placeholder="Pesquisar no fórum" class="search" value="">
+		<a href="../index.html" class="ButtonSearch"><img src="../images/search-icon.png" width="20px"></a>
+    </div>
+</nav>
+
+    <form action="../php/processarLogin.php" method="post" name="login">
         <ul>
-            <li>Email: <input placeholder="Digite seu email" type="text"  name="email"></li>
-            <li>Senha:<input placeholder="Digite sua senha" type="password" name="senha"></li>
+            <li><div>Email:</div> <input placeholder="Digite seu email" type="text"  name="email"></li>
+            <li><div>Senha:</div><input placeholder="Digite sua senha" type="password" name="senha"></li>
             <!-- <li><a href="../index-homework.html" class="myButton">ENTRAR</a></li> -->
             <li><a style="color: rgb(79, 79, 119);" href="../index-homework.html" ><input type="submit" class="myButton" value="Logar"/>ENTRAR</a></li>
         </ul>
     </form>
-
+    
+<div class="marca_da_agua"><a href="codigos.html">_</a></div>  
+  
     
 </body>
 

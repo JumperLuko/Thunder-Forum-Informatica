@@ -1,3 +1,7 @@
+	#lisenha{
+			white-space: normal;
+	}
+	
 	.area-login{
 		text-align: center;
 		font-family: Arial;
@@ -11,10 +15,10 @@
 		display:none;
 	}
 
-		ul{
+		form ul{
 			list-style: none;
 		}
-		li{
+		form li{
 		font-family: Arial;
 		color: #ffffff;
 		width: 15%;	

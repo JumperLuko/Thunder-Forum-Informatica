@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <?php
-require_once "../php/conectar.php";
+//require_once "../php/conectar.php";
 ?>
 
 <head>
@@ -12,6 +12,7 @@ require_once "../php/conectar.php";
         <link rel="icon" type="" href="../icon.png">
         <link type="text/css" rel="stylesheet" href="../style.css">
         <link type="text/css" rel="stylesheet" href="../css/cadastro.css">
+        <script type="text/javascript" src="script/cadastro.js"></script>
 	<style>
 		.article{
 			margin-bottom: 10px;
@@ -21,7 +22,7 @@ require_once "../php/conectar.php";
 
 <body>
     <header>
-		<a href="cadastro-special.php" class="special"><img src="../images/special-ativate.png" width="20px"></a>
+		<a href="cadastro-special.php" class="special"><img src="../images/special-ativate.png" width="20px" alt="Thunder logo"></a>
     	<a href="../index.php"><div class="header_img"></div></div>
         <a href="login.php" class="ButtonLogin">LOGIN</a>
     </header>
@@ -61,16 +62,17 @@ require_once "../php/conectar.php";
 		<input class="space" required="" pattern="[a-zA-Zç Ç_-.]+@[a-zA-Zç Ç.]+" placeholder="email@dominio" type="text" name="email" maxlength="100">
 	</li>
 	
-	<li>
+	 <li>
 		<label>Gênero:</label>
 		<input class="space" required="" pattern="[mfMF]" placeholder="M(Masculino) F(Feminino)" type="text" name="sexo" maxlength="100">
 	</li>
 	
-    <!-- <li>
-		<label>Gênero</label>
+    <!--<li>
+		<label>Gênero:</label>
 		<select class="sexo">
-			<option id="um">Masculino</option>
-			<option id="dois">Feminino</option>
+			<option value="f" '.$check1.'>Feminino</option>
+			<option value="m" '.$check2.'>Masculino</option>
+			<!--<option value="n">none</option>
 		</select>
 	</li>
     <li> -->

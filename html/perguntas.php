@@ -31,20 +31,23 @@
     </div>
 </nav>
     
-<div class="marca_da_agua"><a href="codigos.html">_</a></div>  
+<div class="marca_da_agua"><a href="../codigos.html">_</a></div>  
 
 <div class="category">
+<div class="title-category">Categorias</div>
+<div class="categorys">
 <img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria1.php">Category 1</a><br>
 <img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria2.php">Category 2</a><br>
 <img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria3.php">Category 3</a><br>
 <img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria4.php">Category 4</a><br>
 <img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria5.php">Category 5</a><br>
 </div>
+</div>
 
-<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Questão 1</div><div class="text"><p>Descrição do 1</p></div></div><div class="margin-bottom"></div></a></div>
-<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Questão 2</div><div class="text"><p>Descrição do 2</p></div></div><div class="margin-bottom"></div></a></div>
-<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Questão 3</div><div class="text"><p>Descrição do 3</p></div></div><div class="margin-bottom"></div></a></div>
-<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Questão 4</div><div class="text"><p>Descrição do 4</p></div></div><div class="margin-bottom"></div></a></div>
+<div class="content_question"><a href="perguntas-aberto.php"><div class="article"><div class="title">Quest 1</div><div class="text"><p>Como eu faço quests?</p></div></div><div class="margin-bottom"></div></a></div>
+<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Quest 2</div><div class="text"><p>Este site é novo?</p></div></div><div class="margin-bottom"></div></a></div>
+<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Quest 3</div><div class="text"><p>Gostaram do site?</p></div></div><div class="margin-bottom"></div></a></div>
+<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Quest 4</div><div class="text"><p>Estou com problemas de não saber como ligar o mouse USB</p></div></div><div class="margin-bottom"></div></a></div>
   
 <!-- ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---div---    ---div---    ---div---    ---div---
 -->    
