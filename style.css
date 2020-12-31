@@ -17,7 +17,11 @@
   src: url("fonts/Vanadine Bold.ttf");
 }
 
-/*@font-face { font-family: Century; src: url('GOTHIC.ttf');}*/
+/*@font-face { font-family: Century;
+	src: url('GOTHIC.ttf');
+	font-style:normal;
+	font-weight:normal; 
+	}*/
 
 	header{
 		width: 100%;
@@ -175,6 +179,7 @@ header a img{
 		border-bottom: 2px solid rgba(0, 0, 0, 0.14);
         box-shadow: -40px 0px 300px black;
         //text-align: center;
+        //font-family:Vanadine Bold;
 	}
 
     .navbar_padding{
@@ -229,7 +234,9 @@ header a img{
 	.navbar li a{
 		width: 200px;
 		height: 50px;
-		
+		font-family:Vanadine Bold;
+		font-size: 22px;
+		font-weight:bold;
 	}
 	
 	.border_top_left_radius_menu{

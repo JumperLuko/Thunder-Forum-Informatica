@@ -1,0 +1,20 @@
+body{
+    background-color: #CFDADD;
+}
+.banner{
+    background-color: #2D98AE;
+    margin: 0%;
+    padding: 0px;
+    height: 100px;
+}
+.banner h1{
+    color: #FFFFFF;
+    font-family: Helvetica;
+    padding: 20px;
+}
+a:hover{
+    opacity: 75%;
+}
+.menu {
+
+}
