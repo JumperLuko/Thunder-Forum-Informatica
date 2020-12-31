@@ -34,30 +34,30 @@
 <div class="marca_da_agua"><a href="../codigos.html">_</a></div>  
   
 <section class="content">
-<form>
+<form action="../php/processarCadastro.php" method="post">
 <fieldset>
 	<legend><h1>Cadastrando usuário</h1></legend>
     <li>
 		<label>Nome:</label>
-		<input required="" pattern="[a-zA-Zç Ç]+" placeholder="verdadeiro" type="text">
+		<input required="" pattern="[a-zA-Zç Ç]+" placeholder="verdadeiro" type="text" name="name">
 	</li>
     <li>
-		<label>Nick:</label>
-		<input required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="até x caracteres" type="text">
+		<label>Nickname:</label>
+		<input required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="até x caracteres" type="text" name="nickname">
 	</li>
     <li>
 		<label>Email:</label>
-		<input required="" pattern="[a-zA-Zç Ç_-]+@[a-zA-Zç Ç.]+" placeholder="email@mail" type="text">
+		<input required="" pattern="[a-zA-Zç Ç_-]+@[a-zA-Zç Ç.]+" placeholder="email@mail" type="text" name="email">
 	</li>
     <li>
 		<label>Senha:</label>
-		<input required="" placeholder="lembre-se dela" type="password">
+		<input required="" placeholder="lembre-se dela" type="password" name="password">
 	</li>
 
-    <li>
+    <!--<li>
 		<label>Nascimento:</label>
-		<input required="" pattern="[0-3][0-9]/[0-1][0-9]/[1-2][0-9][0-9][0-9]" placeholder="dd/mm/yyyy" type="date">
-	</li>
+		<input required="" pattern="[0-3][0-9]/[0-1][0-9]/[1-2][0-9][0-9][0-9]" placeholder="dd/mm/yyyy" type="date" name="date">
+	</li>-->
     <li>
 		<label>Sexo</label>
 		<select>

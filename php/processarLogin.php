@@ -11,10 +11,10 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        $login = $_POST["email"];
-        $senha = $_POST["password"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
         
-        $senha = sha1($senha);
+        $password = sha1($password);
         //abrir conexão com o banco de dados
         $conexao = mysqli_connect("localhost", "root", "root", "thunder");
         //Se a conexão foi aberta com sucesso, manda o comando. Se não foi, mostra qual erro ocorreu
@@ -24,7 +24,7 @@ and open the template in the editor.
             echo ($erro);
         } else {
             //o comando é de buscar os usuários, mas somente um: o que tiver login e senha iguais ao que foi informado no formulário de login
-            $comando = mysqli_query($conexao, "SELECT * FROM user WHERE email = '$login' AND password = '$senha' ");
+            $comando = mysqli_query($conexao, "SELECT * FROM user WHERE email = '$email' AND password = '$password' ");
             if ($comando == false) {
                 echo ("erro ao enviar comando para o banco de dados.");
                 $erro = mysqli_error($conexao);
@@ -33,11 +33,11 @@ and open the template in the editor.
                 //Se o comando não retornou false, analisamos quantos registros vieram do banco.
                 //Se veio um registro, achamos um usuário com login e senha iguais aos que foram informados no formulário.
                 //Se não veio registro, não foi encontrado qualquer usuário com login e senha iguais aos que foram informados no formulário.
-                $usuarios = mysqli_num_rows($comando);
-                if($usuarios == 1){
-                    echo("bem vindo $login");
+                $user = mysqli_num_rows($user);
+                if($user == 1){
+                    echo("bem vindo $email");
                 }else{
-                    echo("login ou senha incorretos.");
+                    echo("email ou senha incorretos.");
                 }
             }
         }
