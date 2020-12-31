@@ -1,5 +1,8 @@
 <?php
-    require ("topo.php");
+    include ("topo.php");
+    require("conectar.php");
+    $consulta = "select * from tutorial";
+    $resultado = mysqli_query($conexao,$consulta);
 ?>
         <li class="border_top_left_radius_menu"><a class="no_select" href="index.php">
             <?php
@@ -17,7 +20,6 @@
         <li class="border_menu"><a class="no_select" href="perguntas.php" >PERGUNTAS</a></li>
         <li class="selectli"><a class="select" href="tutoriais.php" >TUTORIAIS</a></li>
         <li class="border_menu"><a class="no_select" href="contato.php" >CONTATO</a></li>
-        
         <?php
             if(isset($_SESSION["id"])){
                 echo('
@@ -32,16 +34,35 @@
 <?php
     require ("topo2.php");
 ?>
-  
+
 <section class="content">
-    <div class="article"><div class="title-tutoriais">Aqui vocÃª pode consultar tutoriais postados pelos administradores da pÃ¡gina</div></div>
+    <div class="article"><div class="title-tutoriais">Aqui você pode consultar tutoriais postados pelos administradores da página</div></div>
+    <?php
+        //$x=0;
+        while($linha  =  mysqli_fetch_array($resultado)){
+            //$x++;
+            //echo("$x");
+            echo('
+                <div class="article">
+                    <div class="block" style="background-color:'.$linha["background_tutorial"].';">
+                        <a href="'.$linha["archive"].'"><div class="block_title">
+                            '.$linha["title_tutorial"].'
+                        </div>
+                        <div class="block_description">
+                            <br/>'.$linha["description"].'
+                        </div>
+                    </div></a>
+                </div>
+            ');
+        }
+    ?>
     <div class="article">
         <div class="block">
             <a href="../pdf/fuciona_computador.pdf"><div class="block_title">
                 Como Funciona um computador?
             </div>
             <div class="block_description">
-                <br/>Aqui vocÃª aprenderÃ¡ bÃ¡sicamente como fuciona o hardware do seu computador, de forma que pessoas sem o minÃ­mo conhecimento tÃ©cnico possam entender.
+                <br/>Aqui você aprenderá básicamente como fuciona o hardware do seu computador, de forma que pessoas sem o minímo conhecimento técnico possam entender.
             </div>
         </div></a>
     </div>
@@ -49,10 +70,10 @@
     <div class="article">
         <div class="block">
             <a href="../pdf/comecar_programar.pdf"><div class="block_title">
-                Como comeÃ§ar a programar?
+                Como começar a programar?
             </div>
             <div class="block_description">
-                <br>Aqui vocÃª aprenderÃ¡ o enrredo histÃ³rico da programaÃ§Ã£o e como programar liguagens fÃ¡ceis, de forma que pessoas sem o minÃ­mo conhecimento tÃ©cnico possam entender.
+                <br>Aqui você aprenderá o enrredo histórico da programação e como programar liguagens fáceis, de forma que pessoas sem o minímo conhecimento técnico possam entender.
             </div>
         </div></a>
     </div>
@@ -60,10 +81,10 @@
     <div class="article">
         <div class="block">
             <a href="../pdf/informatica.pdf"><div class="block_title">
-                O que Ã© informÃ¡tica?
+                O que é informática?
             </div>
             <div class="block_description">
-                <br>ExplicaÃ§Ã£o histÃ³rica e de definiÃ§Ãµes sobre a informÃ¡tica.
+                <br>Explicação histórica e de definições sobre a informática.
             </div>
         </div></a>
     </div>

@@ -48,7 +48,7 @@
     }
     $resultado = mysqli_query($conexao,$consulta);
     while($linha  =  mysqli_fetch_array($resultado)){
-    echo('<div class="content_question"><a href="perguntas-aberto.php?codigo='.$linha["id_post"].'"><div class="article"><div class="tag-post">'.$linha["id_post"].'</div><div class="text_quest"><p>'.$linha["content"].'</p></div></div><div class="margin-bottom"></div></a></div>');
+    echo('<div class="content_question"><a href="perguntas-aberto.php?codigo='.$linha["id_post"].'"><div class="article"><div class="tag-post">quest '.$linha["id_post"].'</div><div class="text_quest"><p>'.$linha["content"].'</p></div></div><div class="margin-bottom"></div></a></div>');
     }
 ?>
 <?php

@@ -1,7 +1,18 @@
 <?php
     require ("topo.php");
 ?>
-        <li class="border_top_left_radius_menu"><a class="no_select" href="index.php">HOME</a></li>
+        <li class="border_top_left_radius_menu"><a class="no_select" href="index.php">
+            <?php
+                if(isset($_SESSION["id"])){
+                    echo('
+                    User
+                    ');
+                }else{
+                    echo('
+                    Home
+                    ');
+                }
+            ?>
         <li class="selectli"><a class="select" href="perguntas.php">PERGUNTAS</a></li>
         <li class="border_menu"><a class="no_select" href="tutoriais.php" >TUTORIAIS</a></li>
         <li class="border_menu"><a class="no_select" href="contato.php" >CONTATO</a></li>
@@ -73,11 +84,11 @@
             <?php
                 if(isset($_SESSION["id"])){
                     echo('
-                        <form class="resposta" name="resposta" method="POST" action="../php/validacao.php">
+                        <form class="resposta" name="resposta" method="POST" action="validacao.php">
                             <textarea name="comentario" class="comentario" placeholder="Responda aqui"></textarea>
                             <input type="hidden" name="id_user" value="'.$_SESSION["id"].'">
                             <input type="hidden" name="id_post" value="'.$codigo.'"><br>
-                            <input type="submit" name="enviar_comentario" value="Enviar">
+                            <div class="homeworkinput"><input type="submit" name="enviar_comentario" value="Enviar"></div>
                         </form>
                     ');
                 } else{

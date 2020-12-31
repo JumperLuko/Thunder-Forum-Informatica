@@ -33,12 +33,12 @@
 ?>
 <section class="content">
     <div class="article">
-        <div class="text">
+        <div class="text_contato">
             Email: email@email. <br>
             Google+: <br><br><br>
 
             <strong>Quem somos:</strong> <br><br>
-            Somos tr√™s estudantes do Instituto Federal Catarinense de Araquari, cursando o ensino m√©dio com curso t√©cnico integrado de inform√°tica. Come√ßamos a criar este site para o trabalho de conclus√£o de curso, mas n√£o iremos parar quando acabarmos o ensino m√©dio, pois nosso objetivo com este site vai muito al√©m de simplesmente terminar o curso. Nosso objetivo √© auxiliar a todos aqueles que precisem de ajuda em rela√ß√£o √† inform√°tica. 
+            Somos trÍs estudantes do Instituto Federal Catarinense de Araquari, cursando o ensino mÈdio com curso tÈcnico integrado de inform·tica. ComeÁamos a criar este site para o trabalho de conclus„o de curso, mas n„o iremos parar quando acabarmos o ensino mÈdio, pois nosso objetivo com este site vai muito alÈm de simplesmente terminar o curso. Nosso objetivo È auxiliar a todos aqueles que precisem de ajuda em relaÁ„o ‡ inform·tica. 
         </div>
     </div>
 </section>

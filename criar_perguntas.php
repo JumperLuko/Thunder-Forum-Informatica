@@ -55,7 +55,7 @@
                 </li>
                 <?php
                     echo('
-                    <input type="hidden" name="id_user" value="'.$_SESSION["id"].'">
+                        <input type="hidden" name="id_user" value="'.$_SESSION["id"].'">
                     ')
                 ?>
                 <li>

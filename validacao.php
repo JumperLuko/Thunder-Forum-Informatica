@@ -6,5 +6,5 @@
         $consulta = Incluir('comment',$_POST['comentario'],0,$_SESSION['id'],$_POST['id_post']);
         $resultado=mysqli_query($conexao,$consulta);
     }
-    echo('<meta http-equiv="refresh" content="0;../html/perguntas-aberto.php?codigo='.$_POST["id_post"].'">');
+    echo('<meta http-equiv="refresh" content="0;perguntas-aberto.php?codigo='.$_POST["id_post"].'">');
 ?>

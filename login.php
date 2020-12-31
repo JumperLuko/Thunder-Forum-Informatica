@@ -26,7 +26,7 @@
             <li><div>Email:</div> <input placeholder="Digite seu email" type="text"  name="email"></li>
             <li><div>Senha:</div><input placeholder="Digite sua senha" type="password" name="senha"></li>
             <!-- <li><a href="../index-homework.html" class="myButton">ENTRAR</a></li> -->
-            <li><a style="color: rgb(79, 79, 119);" href="index-homework.html" ><input type="submit" class="myButton" value="Logar"/>ENTRAR</a></li>
+            <li><!--<a style="color: rgb(79, 79, 119);" href="index-homework.html" >ENTRAR</a>--><input type="submit" class="myButton" value="Logar"/></li>
         </ul>
     </form>
     

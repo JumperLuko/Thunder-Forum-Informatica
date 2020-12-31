@@ -1,0 +1,15 @@
+- Perguntas estar funcionando
+- Login mais seguro
+- Cadastro sem repetição de usuário
+- Página de perguntas e respostas funcionando em php com o botão de denuncia funcionando
+- Pagina de usuário com: perguntas e tutoriais recentes, campo para alterar informações de cadastro
+- Descriçã do sistema de pontos na home
+- Dúvidas complexas
+- Colocar foto de perfil
+- Colocar várias de personalização da página para o usuário
+- Pesquisa funcionar (descrição para pesquisa como cache)
+- Tutoriais: Titulo, imagem, background
+- Denuncia somente para usuario cadastrados
+- Indicar categoria na quest
+- Link ficar em bold
+- Arruma Home para User em perguntas-aberto.php

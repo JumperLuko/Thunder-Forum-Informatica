@@ -30,24 +30,27 @@
     <legend><h1>Cadastrando usuario</h1></legend>
     <li>
         <label>Nome:</label>
-        <input class="space" required="" pattern="[a-zA-ZÃ§ Ã‡]+" placeholder="verdadeiro" type="text" name="nome" id="name" maxlength="100">
+        <input class="space" required="" pattern="[a-zA-Zç Ç]+" placeholder="verdadeiro" type="text" name="nome" id="name" maxlength="100">
     </li>
     <li>
         <label>Nickname:</label>
-        <input class="space" required="" pattern="[a-zA-ZÃ§ Ã‡0-9_]+" placeholder="ate 100 caracteres" type="text" name="nick" maxlength="30">
+        <input class="space" required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="ate 100 caracteres" type="text" name="nick" maxlength="30">
     </li>
     <li>
         <label>Email:</label>
-        <input class="space" required="" pattern="[a-zA-ZÃ§ Ã‡_-.]+@[a-zA-ZÃ§ Ã‡.]+" placeholder="email@dominio" type="text" name="email" maxlength="100">
+        <input class="space" required="" pattern="[a-zA-Zç Ç_-.]+@[a-zA-Zç Ç.]+" placeholder="email@dominio" type="text" name="email" maxlength="100">
     </li>
     
      <li>
-        <label>GÃªnero:</label>
-        <input class="space" required="" pattern="[mfMF]" placeholder="M(Masculino) F(Feminino)" type="text" name="sexo" maxlength="100">
+        <label>Gênero:</label>
+        <select name="sexo">
+            <option value="m">Masculino</option>
+            <option value="f">Feminino</option>
+        </select>
     </li>
     
     <!--<li>
-        <label>GÃªnero:</label>
+        <label>Gênero:</label>
         <select class="sexo">
             <option value="f" '.$check1.'>Feminino</option>
             <option value="m" '.$check2.'>Masculino</option>
@@ -74,7 +77,7 @@
 </section>
     
 <footer class="feet">
-        <p><font>RecomendaÃ§Ãµes: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
+        <p><font>Recomendações: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
 </footer>
 
 </body>

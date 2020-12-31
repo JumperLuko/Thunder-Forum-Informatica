@@ -49,58 +49,73 @@
             <div class="title">Bem-Vindo ao Thunder</div>
             <div class="text">
         <?php
-            $texto = '<p>Seja bem-vindo usuÃ¡rio, aqui vocÃª pode receber respostas para qualquer dÃºvida que tiver quanto Ã  informÃ¡tica e para as dÃºvidas que nem sabia que tinha.<br>';
+            $texto = '<p>Seja bem-vindo usuário, aqui você pode receber respostas para qualquer dúvida que tiver quanto à informática e para as dúvidas que nem sabia que tinha.<br>';
             echo($texto);
         
             require("conectar.php");
         
             if(isset($_SESSION["id"])){
-                $sql = mysqli_query($conexao, "select class_user.class,class_user.level,class_user.score as pontos,user.name,user.nickname as nick,user.email,user.gender,user.user_id_category_user as admin FROM class_user,user WHERE user_id_class_user=id_class_user and id_user='".$_SESSION["id"]."'");
+                $sql = mysqli_query($conexao, "select class_user.class,class_user.level,class_user.score as pontos,user.password,user.name,user.nickname as nick,user.email,user.gender,user.user_id_category_user as admin FROM class_user,user WHERE user_id_class_user=id_class_user and id_user='".$_SESSION["id"]."'");
                 $id = mysqli_fetch_array($sql);
+                $genero=$id["gender"];
+                if($id["gender"]=='m'){
+                    $genero='Masculino';
+                }
+                if($id["gender"]=='f'){
+                    $genero='Feminino';
+                }
                 echo('
-                    <p><b>OlÃ¡ '.$_SESSION["nick"].'</b></p>
+                    <p><b>Olá '.$_SESSION["nick"].'</b></p>
                     <div>
                         <form class="homework">
-                            <div class="title-register">Dados cadastrais do usuÃ¡rio</div>
-                            <li>
-                                <label>Nome: '.$id["name"].'</label>
-                            </li>
-                            <li>
-                                <label>Nickname: '.$id["nick"].'</label>
-                            </li>
-                            <li>
-                                <label>Email: '.$id["email"].'</label>
-                            </li>
-                            <li>
-                                <label>GÃªnero: '.$id["gender"].'</label>
-                            </li>
-                            <li>
-                                <label>Classe: '.$id["class"].'</label>
-                            </li>
-                            <li>
-                                <label>Nivel: '.$id["level"].'</label>
-                            </li>
-                            <li>
-                                <label>Score: '.$id["pontos"].'</label>
-                            </li>
+                            <table>
+                                <div class="title-register">Dados cadastrais do usuário</div>
+                                <tr>
+                                    <td><label>Nome:</label></td><td> '.$id["name"].'</label></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Nickname:</label></td><td> '.$id["nick"].'</td>
+                                </tr>
+                                <tr>
+                                    <td><label>Email:</td><td> '.$id["email"].'</label></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Gênero:</td><td> '.$genero.'</label></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Classe:</td><td> '.$id["class"].'</label></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Nivel:</td><td> '.$id["level"].'</label></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Score:</td><td> '.$id["pontos"].'</label></td>
+                                </tr>
+                            </table>
                         </form>
                     </div>
                     <div>
-                        <form class="homework2" action="atualizar-cadastro.php">
-                            <div class="title-register">AlteraÃ§Ã£o dos dados cadastrais</div>
-                            <li>
-                                <label>Nome:</label>
-                                <input class="space1" required="" pattern="[a-zA-ZÃ§ Ã‡]+" placeholder="ModificaÃ§Ã£o" type="text" name="nome2" id="name" maxlength="100" value="'.$id["name"].'">
-                            </li>
-                            <li>
-                                <label>Nick:</label>
-                                <input class="space1" required="" pattern="[a-zA-ZÃ§ Ã‡0-9_]+" placeholder="ate 100 caracteres" type="text" name="nick2" maxlength="30" value="'.$id["nick"].'">
-                            </li>
-                            <li>
-                                <label>Email:</label>
-                                <input class="space1" required="" pattern="[a-zA-ZÃ§ Ã‡_-.]+@[a-zA-ZÃ§ Ã‡.]+" placeholder="email@dominio" type="text" name="email2" maxlength="100" value="'.$id["email"].'">
-                            </li>
-                            <input type="submit" name="submit" value="Enviar" />
+                        <form class="homework2" action="atualizar-cadastro.php" method="post">
+                            <div class="title-register">Alteração dos dados cadastrais</div>
+                            <table>
+                                <tr>
+                                    <td><label>Nome:</label></td>
+                                    <td><input class="space1" required="" pattern="[a-zA-Zç Ç1]+" placeholder="Modificação" type="text" name="nome2" id="name" maxlength="100" value="'.$id["name"].'"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Nick:</label></td>
+                                    <td><input class="space1" required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="ate 100 caracteres" type="text" name="nick2" maxlength="30" value="'.$id["nick"].'"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Email:</label></td>
+                                    <td><input class="space1" required="" pattern="[a-zA-Zç Ç_-.]+@[a-zA-Zç Ç.]+" placeholder="email@dominio" type="text" name="email2" maxlength="100" value="'.$id["email"].'"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Senha</label></td>
+                                    <td><input class="space1" required="" placeholder="Lembre-se dela" type="password" name="password2" id="password2" maxlength="100" value="'.$id["name"].'"></td>
+                                </tr>
+                                <tr><td><input type="submit" name="submit" value="Enviar" /></td></tr>
+                            </table>
                         </form>
                         <!--'.$id["admin"].'-->
                     </div>
@@ -108,19 +123,61 @@
                 if ($id["admin"]==0) {
                     echo('
                         <div class="homework3">
-                            Hey admin!<br><br>
-                            <form action="insert-tutorial.php">
-                                <li>
-                                    <label>Nome do Tutorial:</label>
-                                    <input class="space2" required="" pattern="[a-zA-ZÃ§ Ã‡0-9_]+" placeholder="FaÃ§a um nome atrativo" type="text" name="nome-tutorial" maxlength="30">
-                                </li>
-                                <li>
-                                    <label>DescriÃ§Ã£o do tutorial:</label>
-                                    <input class="space2" required="" pattern="[a-zA-ZÃ§ Ã‡0-9_]+" placeholder="Escreva sua descriÃ§Ã£o decente" type="text" name="descricao-tutorial" maxlength="30>
-                                </li>
-                                <input type="file" name="pdf" id="pdf" /> <br>
-                                Imagem do Tutorial: <input type="submit" name="submit" value="Enviar" />
-                            </form>
+                            <div class="title-register">Hey admin!</div>
+                            <form action="insert-tutorial.php" method="post">
+                                <table>
+                                    <tr>
+                                        <td><label>Titulo do Tutorial:</label></td>
+                                        <td class="li_grande"><input class="space2" required="" placeholder="Faça um nome atrativo" type="text" name="title_tutorial" maxlength="1000" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Descrição do tutorial:</label></td>
+                                        <td><input class="space2" required="" placeholder="Escreva sua descrição decente" type="text" name="descricao-tutorial" maxlength="1000" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PDF do Tutorial:</td> <td><input type="text" name="pdf" id="pdf" class="space2" placeholder="Coloque o link" maxlength="200"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Imagem do Tutorial:</td> <td><input type="text" name="image" id="image"  class="space2" placeholder="Coloque o link"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cor do tutorial</td> <td><input type="text" name="color" id="color" pattern="#[a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9]" class="space2" placeholder="#FFFFFF    <--   Hexadecimal" maxlength="7"/></td>
+                                    </tr>
+                                        <input type="hidden" name="id_user" value="'.$_SESSION["id"].'">
+                                    <tr>
+                                        <td><input type="submit" name="submit" value="Enviar" /></td>
+                                    </tr>
+                                    </form><br><br>
+                                </table>
+                                <table>
+                                    <form action="" method="post">
+                                        <tr>
+                                            <td>
+                                                <li>
+                                                Lista de usuários: <a href="lista-usuarios.php">Clique aqui para acessar</a>
+                                                </li>
+                                            </td>
+                                        </tr>
+                                    </form>
+                                    <form action="" method="post">
+                                        <tr>
+                                            <td>
+                                            <li>
+                                                <p>Lista de tutoriais e suas informações: <a href="lista-tutoriais.php">Clique aqui para acessar</a></p>
+                                            </li>
+                                            </td>
+                                        </tr>
+                                    </form>
+                                    <form action="" method="post">
+                                        <tr>
+                                            <td>
+                                            <li>
+                                                <p>Lista de denuncias: <a href="lista-denuncia.php">Clique aqui para acessar</a></p>
+                                            </li>
+                                            </td>
+                                        </tr>
+                                    </form>
+                                </table>
                         </div>
                     ');
                 }
@@ -134,3 +191,9 @@
 <?php
     require ("feet.php");
 ?>
+
+<script>
+    tam = document.getElementById("password2").lenght;
+    if (tam < 4)
+        alert("Campo tem que ter mais que 4 caracteres");
+</script>
