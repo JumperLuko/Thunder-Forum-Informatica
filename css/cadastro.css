@@ -1,46 +1,50 @@
 fieldset{
-	list-style:none;
-	border: 0px;
-	//margin: 0 auto; //centralização?
+    list-style:none;
+    border: 0px;
+    //margin: 0 auto; //centralização?
 }
 
 form{
-	//margin: 0 auto;
+    //margin: 0 auto;
 }
 
 form fieldset li{
-	font-family:Calibri,Arial;
+    font-family:Calibri,Arial;
 }
 
 form fieldset li{
-	line-height: 28px;
-	letter-spacing: 0px;
-	word-spacing: 0px;
-	text-indent: 20px;
-	font-family:"consolas","lucida console";
-	font-size:16px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    text-indent: 20px;
+    font-family:"consolas","lucida console";
+    font-size:16px;
+}
+
+.textarea-perguntas{
+    //margin-top:6%;
 }
 
 .space{
-	height:35px;
-	width: 30%;
-	border:1px solid #E1E1E1;
-	border-radius: 5px;
-	background-color:#F8F8F8;
-	margin:5px;
-	//box-shadow: 0px 0px 8px #E4EDF3;
+    height:35px;
+    width: 30%;
+    border:1px solid #E1E1E1;
+    border-radius: 5px;
+    background-color:#F8F8F8;
+    margin:5px;
+    //box-shadow: 0px 0px 8px #E4EDF3;
 }
 
 .sexo{
-	box-shadow: 0px 0px 8px #E4EDF3;
+    box-shadow: 0px 0px 8px #E4EDF3;
 }
 
 .space:hover{
-	box-shadow: 0px 0px 8px #E4EDF3;
+    box-shadow: 0px 0px 8px #E4EDF3;
 }
 
 #enviar{
-	box-shadow: 3px 3px 3px #000;
+    box-shadow: 3px 3px 3px #000;
     margin-top: 20px;
     margin-left: 3%;
     padding: 12px 30px;
@@ -48,9 +52,10 @@ form fieldset li{
 }
 
 #enviar:hover{
-	box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
 }
 
 #enviar:active{
-	box-shadow: 0px 0px 100px blue;
+    box-shadow: 0px 0px 100px blue;
 }
+

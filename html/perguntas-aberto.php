@@ -17,9 +17,18 @@
     <header>
         <a href="../index-special.html" class="special" alt="Thunder logo"><img src="../images/special-ativate.png" width="20px" alt="Daltonicos"></a>
         <a href="../index.php"><div class="header_img"></div></div>
-        <a href="login.php" class="ButtonLogin">LOGIN</a>
+            <?php
+                if(isset($_SESSION["id"])){
+                    echo('
+                    <a href="../php/logout.php" class="ButtonLogin">Logout</a>
+                    ');
+                }else{
+                    echo('
+                    <a href="login.php" class="ButtonLogin">Login</a>
+                    ');
+                }
+            ?>
     </header>
-
 <nav class="navbar" role="navigation">
     <div class="navbar_padding">
         <li class="border_top_left_radius_menu"><a class="no_select" href="../index.php">HOME</a></li>
@@ -28,7 +37,17 @@
     "><a class="select" href="perguntas.php">PERGUNTAS</a></li>
         <li class="border_menu"><a class="no_select" href="tutoriais.php" >TUTORIAIS</a></li>
         <li class="border_menu"><a class="no_select" href="contato.php" >CONTATO</a></li>
-        <li class="border_top_right_radius_menu"><a class="no_select" href="cadastro.php" >CADASTRE-SE</a></li>
+        <?php
+            if(isset($_SESSION["id"])){
+                echo('
+                <li class="border_menu"><a class="no_select" href="criar_perguntas.php">CRIAR  PERGUNTAS</a></li>
+                ');
+            }else{
+                echo('
+                <li class="border_menu"><a class="no_select" href="cadastro.php">CADASTRO</a></li>
+                ');
+            }
+        ?>
         <input type="text" name="searching" placeholder="Pesquisar no forum" class="search" value="">
         <a href="../index.html" class="ButtonSearch"><img src="../images/search-icon.png" width="20px"></a>
     </div>
@@ -46,25 +65,29 @@
 
 <div class="content_question">
     <div class="article">
-        <?php
-            require("../php/conectar.php");
-            if(isset($_GET['codigo'])){
-                $codigo = $_GET['codigo'];
-            } else {
-                $codigo = 1;
-            }
-            $consulta = "select post.content from post where post.id_post='".$codigo."'";
-            $resultado = mysqli_query($conexao,$consulta);
-            while($linha  =  mysqli_fetch_array($resultado)){
-                echo('
-                    <div class="title">Quest '.$codigo.'</div>
-                    <div class="text"><p>'.$linha["content"].'</p></div>
-                ');
-            }
-        ?>
+        <div class="perguntas">
+            <?php
+                require("../php/conectar.php");
+                if(isset($_GET['codigo'])){
+                    $codigo = $_GET['codigo'];
+                } else {
+                    $codigo = 1;
+                }
+                $consulta = "select post.content,post.id_post from post where post.id_post='".$codigo."'";
+                $resultado = mysqli_query($conexao,$consulta);
+                while($linha  =  mysqli_fetch_array($resultado)){
+                    echo('
+                        <div class="denuncia"> <a href="denuncia.php?post='.$linha["id_post"].'">Denunciar</a></div>
+                        <div class="title">Quest '.$codigo.'</div>
+                        <div class="text"><p>'.$linha["content"].'</p></div>
+                    ');
+                }
+            ?>
+        </div>
+        
         <div class="respostas">
             <?php                
-                $consulta = "select user.nickname as nick,comment.content as comentario from comment,user WHERE comment.comment_id_post='".$codigo."' and user.id_user=comment.comment_id_user";
+                $consulta = "select user.nickname as nick,comment.content as comentario,comment.id_comment from comment,user WHERE comment.comment_id_post='".$codigo."' and user.id_user=comment.comment_id_user";
                 $resultado = mysqli_query($conexao,$consulta);
                 while($linha  =  mysqli_fetch_array($resultado)){
                     
@@ -77,6 +100,7 @@
                             <span class="user-name"><a>'.$linha["nick"].'</a></span><br>
                             <span class="post-mensage">'.$linha["comentario"].'</span>
                         </span>
+                        <div class="denuncia"> <a href="denuncia.php?comment='.$linha["id_comment"].'">Denunciar</a></div>
                     </div>
                 ');
                 }
@@ -85,9 +109,9 @@
                 if(isset($_SESSION["id"])){
                     echo('
                         <form class="resposta" name="resposta" method="POST" action="../php/validacao.php">
-                            <textarea name="comentario" rows="4" cols="30" placeholder="Responda aqui"></textarea>
+                            <textarea name="comentario" class="comentario" placeholder="Responda aqui"></textarea>
                             <input type="hidden" name="id_user" value="'.$_SESSION["id"].'">
-                            <input type="hidden" name="id_post" value="'.$codigo.'">
+                            <input type="hidden" name="id_post" value="'.$codigo.'"><br>
                             <input type="submit" name="enviar_comentario" value="Enviar">
                         </form>
                     ');
@@ -99,10 +123,10 @@
 </div>
 
 <footer class="feet">
-        <p><font>Recomendacoes: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
+        <p><font>Recomendações: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
 </footer>
  
-<div class="pro_footer"><img src="../images/teste/morcego.png"/><img src="../images/teste/coracao.png"/><img src="../images/teste/morcego.png"/><img src="../images/teste/coracao.png"/></div>
+<!-- <div class="pro_footer"><img src="../images/teste/morcego.png"/><img src="../images/teste/coracao.png"/><img src="../images/teste/morcego.png"/><img src="../images/teste/coracao.png"/></div> -->
  
 </body>
 

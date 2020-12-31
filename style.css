@@ -332,6 +332,10 @@ header a img{
         font-family:'Calibri';
         font-size:20px;
         }
+        
+        .text b{
+            font-size:25px;
+        }
 
         .feet{
             background: #33337d;
@@ -347,6 +351,7 @@ header a img{
             padding-top: 1%;
             padding-bottom:1%;
             margin-top:15%;
+            margin-bottom:5%;
         }
 
         .feet font{

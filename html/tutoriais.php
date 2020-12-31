@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -17,7 +20,17 @@
     <header>
 		<a href="../index-special.html" class="special"><img src="../images/special-ativate.png" width="20px"></a>
     	<a href="../index.php"><div class="header_img"></div></div>
-        <a href="login.php" class="ButtonLogin">LOGIN</a>
+            <?php
+                if(isset($_SESSION["id"])){
+                    echo('
+                    <a href="../php/logout.php" class="ButtonLogin">Logout</a>
+                    ');
+                }else{
+                    echo('
+                    <a href="login.php" class="ButtonLogin">Login</a>
+                    ');
+                }
+            ?>
     </header>
 
 <nav class="navbar" role="navigation">
@@ -28,7 +41,17 @@
     border-bottom: 4px rgb(87, 155, 190) solid;
 "><a class="select" href="tutoriais.php" >TUTORIAIS</a></li>
 		<li class="border_menu"><a class="no_select" href="contato.php" >CONTATO</a></li>
-		<li class="border_top_right_radius_menu"><a class="no_select" href="cadastro.php" >CADASTRE-SE</a></li>
+		<?php
+            if(isset($_SESSION["id"])){
+                echo('
+                <li class="border_menu"><a class="no_select" href="criar_perguntas.php">CRIAR  PERGUNTAS</a></li>
+                ');
+            }else{
+                echo('
+                <li class="border_menu"><a class="no_select" href="cadastro.php">CADASTRO</a></li>
+                ');
+            }
+        ?>
 		<input type="text" name="searching" placeholder="Pesquisar no fórum" class="search" value="">
 		<a href="../index.html" class="ButtonSearch"><img src="../images/search-icon.png" width="20px"></a>
     </div>
@@ -80,8 +103,6 @@
 <footer class="feet">
         <p><font>Recomendações: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
 </footer>
- 
-<div class="pro_footer"><img src="../images/teste/morcego.png"/><img src="../images/teste/coracao.png"/><img src="../images/teste/morcego.png"/><img src="../images/teste/coracao.png"/></div>
  
 </body>
 

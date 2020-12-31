@@ -4,10 +4,10 @@
 <title>Autenticando</title>
 <script type="text/javascript">
     function login(){
-        setTimeout("window.location='../html/logado/index.php'", 0000);
+        setTimeout("window.location='../html/perguntas.php'", 0000);
     }
     function loginf()  {
-        setTimeout("window.location='../html/login.php'", 1000);
+        setTimeout("window.location='login.php'", 1000);
     }
 </script>
 </head>
@@ -19,12 +19,13 @@ require("conectar.php");
 $email=$_POST['email'];
 $senha=$_POST['senha'];
 
-$sql = mysqli_query($conexao, "SELECT user.id_user FROM user WHERE email = '".$email."' AND password = '".$senha."'");
+$sql = mysqli_query($conexao, "SELECT user.id_user,user.nickname as nick FROM user WHERE email = '".$email."' AND password = '".$senha."'");
 $row = mysqli_num_rows($sql);
 $id = mysqli_fetch_array($sql);
 if($row == 1) {
     session_start();
     $_SESSION['id']=$id['id_user'];
+    $_SESSION['nick']=$id['nick'];
     echo "<center><h1>Você foi autenticado com sucesso! Aguarde um instante.</h1></center>";
     echo "<script>login()</script>";
 } else {

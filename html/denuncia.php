@@ -11,7 +11,7 @@
 ?>
 <head>
     <title>Thunder</title>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" />
         <link rel="icon" type="" href="../icon.png">
         <link type="text/css" rel="stylesheet" href="../style.css">
         <link type="text/css" rel="stylesheet" href="../css/cadastro.css">
@@ -57,7 +57,7 @@
                 ');
             }
         ?>
-        <input type="text" name="searching" placeholder="Pesquisar no fórum" class="search" value="">
+        <input type="text" name="searching" placeholder="Pesquisar no fÃ³rum" class="search" value="">
         <a href="../index.html" class="ButtonSearch"><img src="../images/search-icon.png" width="20px"></a>
     </div>
 </nav>
@@ -65,58 +65,32 @@
 <div class="marca_da_agua"><a href="../codigos.html">_</a></div>  
   
 <section class="content">
-<div class="article">
-<!--<form action="?go=../php/cadastrando.php" method="post">-->
-<form action="../php/cadastrando.php" method="post">
-<fieldset>
-    <legend><h1>Cadastrando usuário</h1></legend>
-    <li>
-        <label>Nome:</label>
-        <input class="space" required="" pattern="[a-zA-Zç Ç]+" placeholder="verdadeiro" type="text" name="nome" id="name" maxlength="100">
-    </li>
-    <li>
-        <label>Nickname:</label>
-        <input class="space" required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="até x caracteres" type="text" name="nick" maxlength="30">
-    </li>
-    <li>
-        <label>Email:</label>
-        <input class="space" required="" pattern="[a-zA-Zç Ç_-.]+@[a-zA-Zç Ç.]+" placeholder="email@dominio" type="text" name="email" maxlength="100">
-    </li>
-    
-     <li>
-        <label>Gênero:</label>
-        <input class="space" required="" pattern="[mfMF]" placeholder="M(Masculino) F(Feminino)" type="text" name="sexo" maxlength="100">
-    </li>
-    
-    <!--<li>
-        <label>Gênero:</label>
-        <select class="sexo">
-            <option value="f" '.$check1.'>Feminino</option>
-            <option value="m" '.$check2.'>Masculino</option>
-            <!--<option value="n">none</option>
-        </select>
-    </li>
-    <li> -->
-
-    <!--<li>
-        <label>Nascimento:</label>
-        <input required="" pattern="[0-3][0-9]/[0-1][0-9]/[1-2][0-9][0-9][0-9]" placeholder="dd/mm/yyyy" type="date" name="date">
-    </li>-->
-    
-    <li>
-        <label>Senha:</label>
-        <input class="space" required="" placeholder="lembre-se dela" type="password" name="senha" maxlength="255">
-    </li>
-
-        <input id="enviar" value="Cadastrar" type="submit">  <!--formaction="../index.html"-->
-    </li>
-</fieldset>
-</form>
-</div>
+    <div class="article">
+        <form action="../php/cadastrando-denuncia.php" method="post">
+            <fieldset>
+                <legend><h1>Cadastramento de Denuncia</h1></legend>
+                <li>
+                    <label>Denuncia: </label>
+                    <input type="text" class="textarea-perguntas" required="" placeholder="Escreva aqui"  name="conteudo" id="conteudo" maxlength="2000"/>
+                </li>
+                <?php
+                    echo('<input type="hidden" name="id_user" value="'.$_SESSION["id"].'">');
+                    if(isset($_GET["post"])){
+                        echo('<input type="hidden" name="post" value="'.$_GET["post"].'">');
+                    }else if(isset($_GET["comment"])){
+                        echo('<input type="hidden" name="comment" value="'.$_GET["comment"].'">');
+                    }
+                ?>
+                <li>
+                    <input id="enviar" value="Cadastrar" type="submit">
+                </li>
+            </fieldset>
+        </form>
+    </div>
 </section>
     
 <footer class="feet">
-        <p><font>Recomendações: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
+        <p><font>Recomendacoes: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
 </footer>
 
 </body>
