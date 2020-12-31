@@ -130,6 +130,7 @@ header a img{
 		text-decoration:none;
 		width:20px;
 		height:20px;
+		border-radius: 100%;
 }
 .ButtonSearch:hover{
 		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #516ea6), color-stop(1, #546996));
@@ -171,12 +172,24 @@ header a img{
 		padding: 0px;
 		border-bottom: 2px solid rgba(0, 0, 0, 0.14);
         box-shadow: -40px 0px 300px black;
+        //text-align: center;
 	}
+
+    .navbar_padding{
+        padding-left: 1%;
+    }
 	
 	.select{
 	font-weight: bold;
-	color: #97A3B7;
+	color: rgba(87, 155, 190, 0.79);
 	}
+
+    .border-li{
+    //border-bottom: 4px rgb(87, 155, 190) solid;
+    //height:4px;
+    //background-color:rgb(87, 155, 190);
+    //bottom:0px;
+    }
 	
 	.no_select{
 	color: white;

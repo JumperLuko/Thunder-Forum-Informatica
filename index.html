@@ -8,24 +8,39 @@
         <link rel="icon" type="image/png" href="../icon.png">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="css/metro.css">
+        <!--<link type="text/css" rel="stylesheet" href="css/login.css">-->
         <script type="text/javascript" src="script/metro.js"></script>
     </head>
 
 <body>
     <header>
 		<a href="index-special.html" class="special"><img src="images/special-ativate.png" width="20px"></a>
-    	<div class="header_img"></div>
-        <a href="html/login.html" class="ButtonLogin">LOGIN</a>
+    	<a href="index.html"><div class="header_img"></div></a>
+    	
+    	<div class="login">
+			<a href="html/login.html" class="ButtonLogin">LOGIN</a>
+			<!--<div class="area-login">
+				<ul>
+					<li>Email: <input placeholder="Digite seu email" type="text"  name="email"></li>
+					<li>Senha:<input placeholder="Digite sua senha" type="password" name="senha"></li>
+					<li><a href="../index-homework.html" class="myButton">ENTRAR</a></li>
+				</ul>
+			</div>-->
+        </div>
     </header>
 
-<nav class="navbar" role="navigation"> 
-    <li class="border_top_left_radius_menu"><a class="select" href="index.html">HOME</a></li>
-    <li class="border_menu"><a class="no_select" href="html/perguntas.html" >PERGUNTAS</a></li>
-    <li class="border_menu"><a class="no_select" href="html/tutoriais.html" >TUTORIAIS</a></li>
-    <li class="border_menu"><a class="no_select" href="html/contato.html" >CONTATO</a></li>
-    <li class="border_top_right_radius_menu"><a class="no_select" href="html/cadastro.html" >CADASTRE-SE</a></li>
-    <input type="text" name="searching" placeholder="Pesquisar no fórum" class="search" value="">
-    <a href="../index.html" class="ButtonSearch"><img src="images/search-icon.png" width="20px"></a>
+<nav class="navbar" role="navigation">
+    <div class="navbar_padding">
+    <li class="border_top_left_radius_menu" style="
+    border-bottom: 4px rgb(87, 155, 190) solid;
+"><div class="border-li"><a class="select" href="index.html">HOME</a></div></li>
+		<li class="border_menu"><a class="no_select" href="html/perguntas.html" >PERGUNTAS</a></li>
+		<li class="border_menu"><a class="no_select" href="html/tutoriais.html" >TUTORIAIS</a></li>
+		<li class="border_menu"><a class="no_select" href="html/contato.html" >CONTATO</a></li>
+		<li class="border_top_right_radius_menu"><a class="no_select" href="html/cadastro.html" >CADASTRE-SE</a></li>
+		<input type="text" name="searching" placeholder="Pesquisar no fórum" class="search" value="">
+		<a href="../index.html" class="ButtonSearch"><img src="images/search-icon.png" width="20px"></a>
+    </div>
 </nav>
 
 <audio controls="auto" id="demo" hidden="true" controls autoplay>
@@ -43,7 +58,7 @@
   
 <section class="content"><div class="article"><div class="title">Bem-Vindo ao Thunder</div><div class="text"><p>Nós te amamos querido usuário</div></div></div>
 
-<div class="myAccount">
+<!--<div class="myAccount">
 	<div class="more"><img src="images/more.png" id="more"/><div class="more_border"></div></div>
     <h1>Minha conta</h1>
 	<div class="container">
@@ -86,7 +101,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div>-->
 
 <div class="news"></div>
 
