@@ -1,0 +1,9 @@
+body{
+    background: #525280;
+}
+
+/* ----------------------- botão ----------------------- */
+.button{
+    text-decoration:none;
+    list-style:none;
+}
