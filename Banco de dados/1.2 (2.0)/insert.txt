@@ -1,0 +1,800 @@
+INSERT INTO user 	(name,nickname,email,gender,password)
+		VALUES	(Ruan,Anao,dwarfsensei.animes@gmail.com,0,KiomaroMetal)
+Name: Ruan
+nickname: Anao
+email: dwarfsensei.animes@gmail.com
+gender: 0
+password: KiomaroMetal
+
+Name: Henry
+nickname: Magus Lavus
+email: magus.lavus@hotmail.com
+gender: 0
+password: ILoveRPG
+
+Name: Kayan
+nickname: Kay
+email: kayanmelanias@gmail.com
+gender: 0
+password: EutenhoTetas
+
+Name: Kiusley
+nickname: Kiu
+email: kiusleykiu@gmail.com
+gender: 0
+password: ImKiuAndImKiu
+
+Name: Bruno Miguel
+nickname: Father Darth_Vader
+email: bm.morais21@gmail.com
+gender: 0
+password: ILovePinkFloyd
+
+Name: Bruna Schubert
+nickname: Schubert
+email: brunaschubert29@gmail.com
+gender: 1
+password: ImPopStar
+
+Name: Cleberson
+nickname: Bolacha
+email: cleberson.mendes@ifc-araquari.edu.br
+gender: 0
+password: ProvadeFudencia
+
+Name: clodoaldo figueredo
+nickname: Clodoaldo
+email: clodoaldo.figueredo@ifc-araquari.edu.br
+gender: 0
+password: (huehuehue)*2.cos35
+
+Name: Daniel Meneguello
+nickname: Danimel
+email: daniel.limeira@ifc-araquari.edu.br 
+gender: 0
+password: BilógicamenteDoce
+
+Name: Edvanderson Ramalho
+nickname: Edie
+email: edvanderson.santos@ifc-araquari.edu.br
+gender: 0
+password: EstouGravido
+
+Name: Elder Mantovani
+nickname: Tio Elder Físico
+email: elder.mantovani@ifc-araquari.edu.br
+gender: 0²
+password: ForçadaJuventude
+
+Name: Fábio Longo
+nickname: Fabioloso Longo
+email: fabio@ifc-araquari.edu.br
+gender: 0
+password: QualideNessaSegurança
+
+Name: Fernando Jose Braz
+nickname: Braz
+email: braz.fernandojose@gmail.com
+gender: 0
+password: EuSouLegal
+
+Name: Gisele Guttschow
+nickname: GGG diva
+email: gisele.guttschow@ifc-araquariu.edu.br
+gender: 1
+password: FodaseOSocilismo
+
+Name: Grasiela
+nickname: Grasi
+email: grasiela.voss@ifc-araquari.edu.br
+gender: 1
+password: QueroAtencao
+
+Name: Ivo Marcos Riegel
+nickname: Ivozodian
+email: ivo.riegel@ifc-araquari.edu.br
+gender: 0
+password: ConsulteMinhaPaciencia
+
+Name: karoline borba
+nickname: Karol
+email: karol.borba@hotmail.com
+gender: 1
+password: *U*
+
+Name: Katia Hardt Siewert
+nickname: Mamãe Katia
+email: katia.siewert@ifc-araquari.edu.br
+gender: 1
+password: NósteAdoramosKatia
+
+Name: Laila Amorim
+nickname: Laila
+email: laila.97@live.com
+gender: 1
+password: EuTenhoCabeloComprido
+
+Name: Leonardo Eizo Sakai
+nickname: Sakai Ignorante
+email: leo.sakai@hotmail.com
+gender: 0 ou 2(gay)
+password: EgocentrismoSakai
+
+Name: Lucas Masao Sakai
+nickname: Sakai Lindu
+email: luc.sakai1@gmail.com
+gender: 0
+password: SakaiGamer
+
+Name: Leonardo Felipe de Ávila Calbusch
+nickname: Leo Deus da Programação
+email: leonardo.avila@ifc-araquari.edu.br
+gender: 0
+password: NuncaConfieNoEmerson
+
+Name: Marcos Feliph Zago
+nickname: Zago 
+email: marcosfeeeliph@gmail.com
+gender: 0
+password: EuSouZago
+
+Name: Marilene Maria Schmidt
+nickname: Bunduda
+email: marilene.schmidt@ifc-araquari.edu.br
+gender: 1
+password: StripDance
+
+Name: Marlos José de França
+nickname: Marlinhos
+email: marlos@ifc-araquari.edu.br
+gender: 0
+password: ProvinhaMiniEnem
+
+Name: Mayara Machado
+nickname: May
+email: maymachado98@gmail.com
+gender: 0 ou 4(bi)
+password: Biflex
+
+Name: Otaniel
+nickname: Totaniel das químicas
+email: otoniel.braga@ifc-araquari.edu.br
+gender: 0
+password: HjFumemAPagina42
+
+Name: Pâmela Olbermann
+nickname: Pâmela
+email: durink.pame.5.1@gmail.com
+gender: 1
+password: 1MetroTem60cm
+
+Name: Paulo Cézar Oliveira
+nickname: PC
+email: paulo.oliveira@ifc-araquari.edu.br
+gender: 0
+password: ISpeakEnglish
+
+Name: Paulo de Almeida Correia Júnior
+nickname: Paulo Almeida
+email: paulo.almeida@ifc-araquari.edu.br
+gender: 0
+password: Vozeirão
+
+Name: Pedro Henrique
+nickname: Pedro Henrique
+email: pedrobarravas5@gmail.com
+gender: 0
+password: EuSeiPHP
+
+Name: Rafaela Macedo
+nickname: Rafaela Macedo
+email: rafaela_macedogomes@hotmail.com
+gender: 1
+password: EuTentoCantar
+
+Name: Renato Benkendorf
+nickname: Renato na onda
+email: renato.benkoli@hotmail.com
+gender: 0
+password: CaraEntreNaOnda
+
+Name: Renilse
+nickname: umpa lumpa
+email: renilse.batista@ifc-araquari.edu.br
+gender: 1
+password: Spanish
+
+Name: Roberto
+nickname: Roberto Social
+email: roberto.souza@ifc-araquari.edu.br
+gender: 0
+password: DanceOtarioshuahua
+
+Name: Rodrigo Fermino
+nickname: Rodrigo existiu
+email: digoo-123@hotmail.com
+gender: 0
+password: EuExistoEGostoDeCaminhões
+
+Name: Talita Paixão
+nickname: Talita Paixão
+email: tali.ifsc@gmail.com
+gender: 1
+password: PaixaoDSerAgro
+
+Name: Tania Maria Tonial
+nickname: Tania dos Vírus
+email: tania.tonial@ifc-araquari.edu.br
+gender: 1
+password: SaibaOsNomesCientificoshuahuaMasEuNãoSeiLigarOProjetor
+
+Name: Thayna Meneguelle
+nickname: Thayna Meneguelle
+email: thaynag.meneguelle@gmail.com
+gender: 1
+password: EuSouAgrassivaSemPerceber
+
+Name: Tiago Coelho
+nickname: Tiago das Histórias
+email: tiago.coelho@ifc-araquari.edu.br
+gender: 0
+password: EuSouRuimEmHistória
+
+Name: lucas josé ribeiro
+nickname: TOFinho
+email: lukinjose@hotmail.com
+gender: 0
+password: ImTOF
+
+Name: Uriel Fernandes
+nickname: Uriel
+email: uriel.fernandesf@gmail.com
+gender: 0
+password: LaFonteine
+
+Name: Victor Waar
+nickname: Bart Simpsom
+email: victorwaar17@gmail.com
+gender: 0
+password: EuGostoDosSimpsons
+
+Name: Vinicius Bretas
+nickname: Cosmos Kitsune
+email: viniciusbretasavezani@gmail.com
+gender: 0 ou 4(bi)
+password: Raposa
+
+Name: Vinicius Lima
+nickname: Tomézinho
+email: vinelima1996@gmail.com
+gender: 0
+password: Cotoco
+
+Name: Vitor Maximiano
+nickname: Vitor estranho
+email: rike2008@gmail.com
+gender: 0
+password: MeusDedosSaoEstranhos
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+
+Name: 
+nickname: 
+email: 
+gender: 
+password: 
+

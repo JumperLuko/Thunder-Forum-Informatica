@@ -5,6 +5,7 @@
                 //width: 100%;
                 margin: 0px;
         font-family: Arial;
+        //height: 100%;
 	}
 	
 	*{
@@ -66,7 +67,7 @@ header a img{
 		font-family:arial;
 		font-size:13px;
 		font-weight:bold;
-		padding:6px 30px;
+		padding:11px 28px;
 		//margin-top: 50px;
 		//text-align: center;
 		//MARGIN-right:5%;
@@ -74,6 +75,7 @@ header a img{
 		Position: absolute;
 		right: 5%;
 		top:14%;
+        border-radius:100%;
 		}
 	.ButtonLogin:hover {
 		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #516ea6), color-stop(1, #546996));
