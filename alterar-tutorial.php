@@ -107,11 +107,11 @@
                                                 <input type="submit" name="submit" value="Alterar" />
                                             </td>
                                     </form>
-                                    <form action="processar-alterar-tutorial.php" method="post">
+                                    <!--<form action="processar-alterar-tutorial.php" method="post">
                                             <td>
                                                 <input type="submit" name="submit" value="Apagar" />
                                             </td>
-                                    </form>
+                                    </form>-->
                                         </tr>
                                 </table>
                             ');
