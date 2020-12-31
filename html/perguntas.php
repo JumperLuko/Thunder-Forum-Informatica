@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-	<title>Thunder</title>
+	<title>Thunder - Perguntas</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
         <link rel="icon" type="image/png" href="http://icdn.pro/images/en/l/i/lightning-icone-7684-96.png">
         <link type="text/css" rel="stylesheet" href="../style.css">
@@ -34,20 +34,20 @@
 <div class="marca_da_agua"><a href="codigos.html">_</a></div>  
 
 <div class="category">
-<img src="../images/arrow-right.png" width="5px">Category
-<img src="../images/arrow-right.png" width="5px">Category 2
-<img src="../images/arrow-right.png" width="5px">Category 3
-<img src="../images/arrow-right.png" width="5px">Category 4
-<img src="../images/arrow-right.png" width="5px">Category 5
+<img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria1.php">Category 1</a><br>
+<img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria2.php">Category 2</a><br>
+<img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria3.php">Category 3</a><br>
+<img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria4.php">Category 4</a><br>
+<img src="../images/arrow-right.png" width="5px"><a href="categorias/categoria5.php">Category 5</a><br>
 </div>
 
-<div class="content_question"><div class="article">algo<div class="margin-bottom"></div></div></div>
-<div class="content_question">-</div>
-<div class="content_question">-</div>
-<div class="content_question">-</div>
+<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Questão 1</div><div class="text"><p>Descrição do 1</p></div></div><div class="margin-bottom"></div></a></div>
+<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Questão 2</div><div class="text"><p>Descrição do 2</p></div></div><div class="margin-bottom"></div></a></div>
+<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Questão 3</div><div class="text"><p>Descrição do 3</p></div></div><div class="margin-bottom"></div></a></div>
+<div class="content_question"><a href="../index.php"><div class="article"><div class="title">Questão 4</div><div class="text"><p>Descrição do 4</p></div></div><div class="margin-bottom"></div></a></div>
   
----Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---div---    ---div---    ---div---    ---div---
-    
+<!-- ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---Blocos---    ---div---    ---div---    ---div---    ---div---
+-->    
 <footer class="feet">
         <p><font>Recomendações: </font></p><a href="http://store.steampowered.com/"><strong>Steam</strong> (Comunidade de jogos)</a>, <a href="https://cpanel.hostinger.com.br/"><strong>Hostinger</strong> (hospedagem gratuita)</a>
 </footer>
