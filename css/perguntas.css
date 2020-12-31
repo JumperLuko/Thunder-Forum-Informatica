@@ -1,0 +1,23 @@
+        .content_question	{
+            background-color:#9999B3;
+            border-radius:5px;
+            margin-left:35%;
+            margin-right:5%;
+            margin-top:2%;
+            margin-bottom:2%;
+            height:100%;
+            border: 2px solid rgba(0, 0, 0, 0.74);
+            //float:right;
+            padding: 0.2%;
+        }
+
+.category{
+	background-color:#9999B3;
+	border-radius:5px;
+	margin-left:3%;
+	margin-right:70%;
+	margin-top:2%;
+	float:left;
+	border: 2px solid rgba(0, 0, 0, 0.74);
+	padding: 0.2%;
+}
