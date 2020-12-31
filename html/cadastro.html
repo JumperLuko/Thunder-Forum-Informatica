@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Thunder</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link rel="icon" type="../image/png" href="http://icdn.pro/images/en/l/i/lightning-icone-7684-96.png">
+        <link type="text/css" rel="stylesheet" href="../style.css">
+        <link type="text/css" rel="stylesheet" href="../css/cadastro.css">
+    </head>
+
+<body>
+    <header>
+        <a href="login.html" class="myButton">LOGIN</a>
+    </header>
+
+<nav class="navbar" role="navigation"> 
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="perguntas.html" >PERGUNTAS</a></li>
+    <li><a href="tutoriais.html" >TUTORIAIS</a></li>
+    <li><a href="contato.html" >CONTATO</a></li>
+    <li><a href="cadastro.html" >CADASTRE-SE</a></li>
+    <input type="text" name="searching" placeholder="Pesquisar no fórum" class="search" value="">
+    </nav>
+    
+<div class="marca_da_agua"><a href="../codigos.html">_</a></div>  
+  
+<section class="content">
+<form>
+<fieldset>
+	<legend><h1>Cadastrando usuário</h1></legend>
+    <li>
+		<label>Nome:</label>
+		<input required="" pattern="[a-zA-Zç Ç]+" placeholder="verdadeiro" type="text">
+	</li>
+    <li>
+		<label>Nick:</label>
+		<input required="" pattern="[a-zA-Zç Ç0-9_]+" placeholder="até x caracteres" type="text">
+	</li>
+    <li>
+		<label>Email:</label>
+		<input required="" pattern="[a-zA-Zç Ç_-]+@[a-zA-Zç Ç.]+" placeholder="email@mail" type="text">
+	</li>
+    <li>
+		<label>Senha:</label>
+		<input required="" placeholder="lembre-se dela" type="password">
+	</li>
+
+    <li>
+		<label>Nascimento:</label>
+		<input required="" pattern="[0-3][0-9]/[0-1][0-9]/[1-2][0-9][0-9][0-9]" placeholder="dd/mm/yyyy" type="date">
+	</li>
+    <li>
+		<label>Sexo</label>
+		<select>
+			<option>Masculino</option>
+			<option>Feminino</option>
+		</select>
+	</li>
+    <li>
+		<input value="Enviar" formaction="../index.html" type="submit">
+	</li>
+</fieldset>
+</form>
+</section>
+    
+<footer class="feet">
+        Links: <a href="http://store.steampowered.com/">Steam</a>
+</footer>
+ 
+</body>
+
+</html>
